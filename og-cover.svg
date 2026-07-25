@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#10182B"/>
+  <circle cx="1080" cy="120" r="90" fill="none" stroke="#A9825A" stroke-width="1.5" opacity="0.5"/>
+  <text x="90" y="330" font-family="Georgia, serif" font-size="76" font-weight="600" fill="#F7F5F1">Rəfael Fərzəliyev</text>
+  <text x="90" y="390" font-family="IBM Plex Mono, monospace" font-size="24" letter-spacing="2" fill="#A9825A">HÜQUQ MƏZUNU — LEGAL TECH</text>
+  <text x="90" y="440" font-family="IBM Plex Mono, monospace" font-size="20" fill="#9199B5">Bakı, Azərbaycan</text>
+</svg>
