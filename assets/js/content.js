@@ -39,7 +39,7 @@ window.SITE_CONTENT = {
       portraitBody: "assets/images/portrait.jpg faylını əlavə edin — şəkil avtomatik burda görünəcək"
     },
     about: {
-      eyebrow: "Maddə 01 — Bəyanat",
+      eyebrow: "Bölmə 01 — Bəyanat",
       title: "Rəfael haqqında",
       p1: "Bakı Dövlət Universitetinin Hüquq fakültəsi məzunuyam, korporativ hüquq və məhkəmə prosedurları üzrə praktiki təcrübəyə malikəm. Legal Tech sahəsinə maraq göstərir, hüquqi iş axınlarını optimallaşdırmaq üçün Python və data analitikasından istifadə edirəm. Məqsədim analitik və hüquqi bilikləri birləşdirərək dəqiq, əlçatan həllər təqdim etməkdir.",
       p2: "Praktiki təcrübəmə \"Azərbaycan Dəmir Yolları\" QSC-də hüquq təcrübəçisi kimi korporativ müqavilələrin hazırlanması, Bakı Ağır Cinayətlər Məhkəməsində hakimlərin yanında könüllü müşahidəçi kimi iştirak, həmçinin \"Femida\" Vəkillik Modulunda simulyasiya edilmiş məhkəmə işləri üzərində vəkillik və sənədləşmə bacarıqlarımın inkişafı daxildir.",
@@ -52,7 +52,7 @@ window.SITE_CONTENT = {
       ]
     },
     experience: {
-      eyebrow: "Maddə 02 — Qeyd",
+      eyebrow: "Bölmə 02 — Qeyd",
       title: "Peşəkar Təcrübə",
       subtitle: "Hüquqi təcrübələrimin, könüllülük fəaliyyətimin və məhkəmə prosesləri ilə tanışlığımın qısa xülasəsi.",
       items: [
@@ -87,7 +87,7 @@ window.SITE_CONTENT = {
       ]
     },
     education: {
-      eyebrow: "Maddə 03 — Baza",
+      eyebrow: "Bölmə 03 — Baza",
       title: "Təhsil",
       items: [
         {
@@ -101,7 +101,7 @@ window.SITE_CONTENT = {
       ]
     },
     skills: {
-      eyebrow: "Maddə 04 — Səlahiyyətlər",
+      eyebrow: "Bölmə 04 — Səlahiyyətlər",
       title: "Bacarıqlar",
       categories: [
         { title: "Hüquqi Bacarıqlar", items: ["Hüquqi Araşdırma və Sənədləşmə", "Müqavilə Hüququ", "Hüquqi Yazı"] },
@@ -118,7 +118,7 @@ window.SITE_CONTENT = {
       ]
     },
     certifications: {
-      eyebrow: "Maddə 05 — Sənədlər",
+      eyebrow: "Bölmə 05 — Sənədlər",
       title: "Sertifikatlar",
       items: [
         {
@@ -130,7 +130,7 @@ window.SITE_CONTENT = {
       ]
     },
     projects: {
-      eyebrow: "Maddə 06 — Təşəbbüs",
+      eyebrow: "Bölmə 06 — Təşəbbüs",
       title: "Layihələr",
       tagline: "Təsisçi və Kontent Yaradıcısı",
       itemTitle: "\"Saniyəlik Hüquq\"",
@@ -143,7 +143,7 @@ window.SITE_CONTENT = {
       ]
     },
     contact: {
-      eyebrow: "Maddə 07 — Yazışma",
+      eyebrow: "Bölmə 07 — Yazışma",
       title: "Əlaqə",
       description: "Bakıda və digər yerlərdə hüquq, legal-tech və məzun imkanlarına açığam. Mənə çatmağın ən sürətli yolu e-poçtdur.",
       email: { label: "E-poçt", value: "rafaelfarzaliyev@outlook.com" },
