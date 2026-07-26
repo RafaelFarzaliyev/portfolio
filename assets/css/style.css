@@ -1,10 +1,10 @@
 /* =========================================================================
    Rafael Farzaliyev — Portfolio
-   Design language: a legal "case file" — statute-style clause numbers (§),
-   docket-header eyebrows, and a hairline rule system borrowed from
-   contracts and court filings. Serif display for gravitas, a clean sans
-   for reading, and a mono face for anything that behaves like a label,
-   citation, or clause reference.
+   Design language: a legal "case file" — statute-style clause numbers
+   ("Maddə" / "Article"), docket-header eyebrows, and a hairline rule
+   system borrowed from contracts and court filings. A classic, formal
+   serif display for gravitas, a clean sans for reading, and a mono face
+   for anything that behaves like a label, citation, or clause reference.
    ========================================================================= */
 
 :root{
@@ -35,7 +35,7 @@
   --shadow: 0 1px 2px rgba(16,20,31,0.04), 0 8px 24px rgba(16,20,31,0.06);
   --shadow-lg: 0 4px 10px rgba(16,20,31,0.06), 0 24px 48px rgba(16,20,31,0.10);
 
-  --font-display: 'Fraunces', 'Georgia', serif;
+  --font-display: 'Source Serif 4', 'Georgia', serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
 
@@ -288,7 +288,7 @@ a:focus-visible, button:focus-visible, input:focus-visible{
    --------------------------------------------------------------------- */
 .hero{
   position: relative;
-  padding: 168px 0 96px;
+  padding: 152px 0 36px;
   overflow: hidden;
 }
 .hero::before{
@@ -405,6 +405,12 @@ a:focus-visible, button:focus-visible, input:focus-visible{
   overflow: hidden;
 }
 .portrait-frame .placeholder-copy{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   padding: 24px;
   color: var(--text-soft);
@@ -417,6 +423,14 @@ a:focus-visible, button:focus-visible, input:focus-visible{
   margin-bottom: 8px;
   font-size: 12px;
   letter-spacing: 0.05em;
+}
+.portrait-img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
 }
 .seal-ring{
   position: absolute;
@@ -442,8 +456,9 @@ a:focus-visible, button:focus-visible, input:focus-visible{
 /* ---------------------------------------------------------------------
    Section scaffolding
    --------------------------------------------------------------------- */
-section{ padding: 108px 0; border-top: 1px solid var(--rule); }
+section{ padding: 72px 0; border-top: 1px solid var(--rule); }
 .hero{ border-top: none; }
+section[id]{ scroll-margin-top: 88px; }
 .section-head{ margin-bottom: 52px; max-width: 62ch; }
 .section-head h2{
   font-family: var(--font-display);
@@ -695,8 +710,9 @@ section{ padding: 108px 0; border-top: 1px solid var(--rule); }
    Contact
    --------------------------------------------------------------------- */
 .contact-panel{
-  background: var(--navy);
-  color: #EDEAE2;
+  background: var(--bg-raised);
+  color: var(--text);
+  border: 1px solid var(--rule);
   border-radius: 16px;
   padding: 56px;
   display: grid;
@@ -704,8 +720,8 @@ section{ padding: 108px 0; border-top: 1px solid var(--rule); }
   grid-template-columns: 1fr;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-lg);
 }
-[data-theme="dark"] .contact-panel{ background: var(--bg-raised); border: 1px solid var(--rule); }
 @media (min-width: 860px){
   .contact-panel{ grid-template-columns: 1.2fr 1fr; }
 }
@@ -715,7 +731,7 @@ section{ padding: 108px 0; border-top: 1px solid var(--rule); }
   margin: 14px 0 16px;
   font-weight: 600;
 }
-.contact-panel > div > p{ color: #B7BBD1; max-width: 48ch; }
+.contact-panel > div > p{ color: var(--text-soft); max-width: 48ch; }
 .contact-panel .clause{ color: var(--seal); }
 .contact-panel .clause::before{ background: var(--seal); }
 
@@ -725,15 +741,14 @@ section{ padding: 108px 0; border-top: 1px solid var(--rule); }
   align-items: center;
   gap: 14px;
   padding: 16px 18px;
-  border: 1px solid rgba(255,255,255,0.14);
+  border: 1px solid var(--rule-strong);
   border-radius: 10px;
   transition: border-color var(--transition), background var(--transition);
   font-size: 0.95rem;
 }
-[data-theme="dark"] .contact-list a{ border-color: var(--rule); }
-.contact-list a:hover{ border-color: var(--seal); background: rgba(255,255,255,0.03); }
+.contact-list a:hover{ border-color: var(--seal); }
 .contact-list a svg{ width: 19px; height: 19px; flex-shrink: 0; color: var(--seal); }
-.contact-list a .clabel{ font-family: var(--font-mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: #9199B5; display:block; margin-bottom: 2px; }
+.contact-list a .clabel{ font-family: var(--font-mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-soft); display:block; margin-bottom: 2px; }
 
 /* ---------------------------------------------------------------------
    Footer
@@ -749,3 +764,40 @@ section{ padding: 108px 0; border-top: 1px solid var(--rule); }
   letter-spacing: 0.03em;
 }
 .site-footer a{ color: var(--seal); }
+
+/* ---------------------------------------------------------------------
+   Mobile refinements
+   --------------------------------------------------------------------- */
+@media (max-width: 480px){
+  .container{ padding: 0 18px; }
+
+  .hero{ padding: 116px 0 44px; }
+  .hero h1{ font-size: clamp(2.1rem, 9vw, 3rem); }
+  .hero .role{ font-size: 12px; }
+  .hero p.lede{ font-size: 1rem; }
+  .docket{ font-size: 11px; padding: 7px 12px; }
+  .hero-cta{ gap: 10px; }
+  .btn{ padding: 12px 18px; font-size: 13.5px; }
+
+  section{ padding: 64px 0; }
+  .section-head{ margin-bottom: 36px; }
+
+  .nav{ height: 64px; }
+  .nav-actions{ gap: 6px; }
+  .lang-btn{ padding: 5px 9px; font-size: 11px; }
+  .theme-toggle, .menu-toggle{ width: 36px; height: 36px; }
+  .theme-toggle svg, .menu-toggle svg{ width: 16px; height: 16px; }
+  .brand{ font-size: 13px; }
+  .brand .brand-mark{ width: 26px; height: 26px; font-size: 11px; }
+
+  .timeline{ padding-left: 28px; margin-left: 2px; }
+  .timeline-item::before{ left: -34px; }
+  .timeline-item{ padding-bottom: 34px; }
+
+  .stat-card{ padding: 16px 18px; }
+  .skill-card{ padding: 20px 18px; }
+  .cert-card{ padding: 20px; gap: 14px; }
+  .project-card{ padding: 24px 20px; }
+  .contact-panel{ padding: 28px 20px; }
+  .contact-list a{ padding: 14px; }
+}
