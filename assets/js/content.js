@@ -143,9 +143,9 @@ window.SITE_CONTENT = {
       ]
     },
     contact: {
-      eyebrow: "Bölmə 07 — Yazışma",
+      eyebrow: "Bölmə 07 — Əlaqə",
       title: "Əlaqə",
-      description: "Bakıda və digər yerlərdə hüquq, legal-tech və məzun imkanlarına açığam. Mənə çatmağın ən sürətli yolu e-poçtdur.",
+      description: "Bakıda iş imkanlarına açığam. Mənə çatmağın ən sürətli yolu e-poçtdur.",
       email: { label: "E-poçt", value: "rafaelfarzaliyev@outlook.com" },
       phone: { label: "Telefon", value: "+994 55 292 18 18" },
       linkedin: { label: "LinkedIn", value: "linkedin.com/in/rafaelfarzaliyev" }
