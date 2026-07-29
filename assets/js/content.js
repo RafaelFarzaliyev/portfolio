@@ -34,7 +34,7 @@ window.SITE_CONTENT = {
       title: "Rəfael haqqında",
       p1: "Analitik düşüncə ilə hüquqi yanaşmanı birləşdirməyi sevirəm — müqavilələrin hazırlanmasından məhkəmə materiallarının təhlilinə qədər.",
       p2: "\"Azərbaycan Dəmir Yolları\" QSC-də hüquq təcrübəçisi kimi korporativ müqavilələrin hazırlanması və hüquqi araşdırmalar üzərində çalışmışam.",
-      p3: "Bununla yanaşı, \"Saniyəlik Hüquq\" layihəsinin təsisçisiyəm. Layihə çərçivəsində mürəkkəb hüquqi mövzuları hüquqi dizayn prinsipləri əsasında sadə və vizual f[...]",
+      p3: "Bununla yanaşı, \"Saniyəlik Hüquq\" layihəsinin təsisçisiyəm. Layihə çərçivəsində mürəkkəb hüquqi mövzuları hüquqi dizayn prinsipləri əsasında sadə və vizual formada təqdim edirəm.",
       stats: [
         { label: "Təhsil", value: "Hüquqşünaslıq (Bakalavr), BDU" },
         { label: "İxtisaslaşma", value: "Müqavilə Hüququ və Legal Tech" },
@@ -91,7 +91,10 @@ window.SITE_CONTENT = {
           period: "2026 — Hazırda",
           title: "İnformasiya Hüququ",
           org: "Bakı Dövlət Universiteti",
-          bullets: ["İnformasiya hüququ sahəsində biliklərimi dərinləşdirməyə davam edirəm."]
+          bullets: [
+            "İxtisaslaşma: İnformasiya Hüququ və Rəqəmsal Hüquqlar.",
+            "Tədqiqat: Hüquqi rəqəmsallaşdırma və məlumatların qorunması."
+          ]
         }
       ]
     },
@@ -180,7 +183,7 @@ window.SITE_CONTENT = {
       nameFirst: "Rafael",
       nameLast: "Farzaliyev",
       role: "LAWYER • LEGAL TECH • CONTRACT LAW",
-      lede: "I graduated from the Faculty of Law at Baku State University and gained practical experience in corporate legal practice and courtroom proceedings. My current focus is on Legal Tech [...]",
+      lede: "I graduated from the Faculty of Law at Baku State University and gained practical experience in corporate legal practice and courtroom proceedings. My current focus is on Legal Tech.",
       ctaContact: "Contact Me",
       ctaExperience: "View Experience",
       ctaDownload: "Download CV",
@@ -277,7 +280,7 @@ window.SITE_CONTENT = {
       eyebrow: "Section 05 — Certifications",
       title: "Certifications",
       items: [
-        { seal: "YALE", title: "American Contract Law I", issuer: "Yale University · Coursera · June 2026", description: "Studied core principles of contract law under U.S. common law (offer, a[...]" }
+        { seal: "YALE", title: "American Contract Law I", issuer: "Yale University · Coursera · June 2026", description: "Studied core principles of contract law under U.S. common law (offer, acceptance, consideration, and remedies for breach)." }
       ]
     },
     projects: {
