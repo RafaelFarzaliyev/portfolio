@@ -93,14 +93,13 @@ window.SITE_CONTENT = {
           org: "Bakı Dövlət Universiteti",
           bullets: ["İnformasiya hüququ sahəsində biliklərimi dərinləşdirməyə davam edirəm."]
         },
-        // Draft master's entry — placeholder; edit later as needed
         {
-          period: "2026 — 2028",
-          title: "Magistratura (Hüquq) — Draft",
+          period: "2026 — Hal-Hazırda",
+          title: "İnformasiya Hüququ",
           org: "Bakı Dövlət Universiteti",
           bullets: [
-            "Konsentrasiya: İnformasiya Hüququ və Rəqəmsal Hüquq (draft entry).",
-            "Tədqiqat: Hüquqi rəqəmsallaşma və məlumatların qorunması (nümunə)."
+            "İnformasiya Hüququ və Rəqəmsal Hüquq.",
+            "Tədqiqat: Hüquqi rəqəmsallaşma və məlumatların qorunması."
           ]
         }
       ]
@@ -261,14 +260,13 @@ window.SITE_CONTENT = {
           org: "Baku State University",
           bullets: ["Continuing studies in information law and contemporary legal challenges."]
         },
-        // Draft master's entry — placeholder; edit later as needed
         {
-          period: "2026 — 2028",
-          title: "Master's (Law) — Draft",
+          period: "2026 — Ongoing",
+          title: "İnformation Law",
           org: "Baku State University",
           bullets: [
-            "Concentration: Information Law and Digital Rights (draft entry).",
-            "Research: Legal digitization and data protection (example)."
+            "Concentration: Information Law and Digital Rights.",
+            "Research: Legal digitization and data protection."
           ]
         }
       ]
