@@ -22,7 +22,7 @@ window.SITE_CONTENT = {
       nameFirst: "Rəfael",
       nameLast: "Fərzəliyev",
       role: "HÜQUQŞÜNAS • LEGAL TECH • MÜQAVİLƏ HÜQUQU",
-      lede: "Bakı Dövlət Universitetinin Hüquq fakültəsini bitirmişəm və korporativ hüquq sahəsində, eləcə də məhkəmə proseslərində praktiki təcrübə qazanmışam. Layihələrim arasında hüquqi maarifləndirmə və Legal Tech təşəbbüsləri yer alır; hazırda müqavilə hüququ və informasiya hüququ sahələrini dərinləşdirirəm.",
+      lede: "Bakı Dövlət Universitetinin Hüquq fakültəsini bitirmişəm və korporativ hüquq sahəsində, eləcə də məhkəmə proseslərində praktiki təcrübə qazanmışam. Hazırda L[...]",
       ctaContact: "Əlaqə saxla",
       ctaExperience: "Təcrübəyə bax",
       ctaDownload: "CV-ni yüklə",
@@ -32,9 +32,9 @@ window.SITE_CONTENT = {
     about: {
       eyebrow: "Bölmə 01 — Haqqımda",
       title: "Rəfael haqqında",
-      p1: "Analitik düşüncə ilə hüquqi yanaşmanı birləşdirməyi sevirəm — müqavilələrin hazırlanmasından məhkəmə materiallarının təhlilinə qədər geniş spektrdə işləmişəm.",
-      p2: "\"Azərbaycan Dəmir Yolları\" QSC-də hüquq təcrübəçisi kimi korporativ müqavilələrin hazırlanması və hüquqi araşdırmalar üzərində çalışmışam, həmçinin normativ aktların tətbiqi üzrə praktiki təcrübə qazanmışam.",
-      p3: "Bununla yanaşı, \"Saniyəlik Hüquq\" layihəsinin təsisçisiyəm — mürəkkəb hüquqi mövzuları hüquqi dizayn prinsipləri ilə sadə və vizual formada təqdim edən təşəbbüs.",
+      p1: "Analitik düşüncə ilə hüquqi yanaşmanı birləşdirməyi sevirəm — müqavilələrin hazırlanmasından məhkəmə materiallarının təhlilinə qədər.",
+      p2: "\"Azərbaycan Dəmir Yolları\" QSC-də hüquq təcrübəçisi kimi korporativ müqavilələrin hazırlanması və hüquqi araşdırmalar üzərində çalışmışam.",
+      p3: "Bununla yanaşı, \"Saniyəlik Hüquq\" layihəsinin təsisçisiyəm. Layihə çərçivəsində mürəkkəb hüquqi mövzuları hüquqi dizayn prinsipləri əsasında sadə və vizual f[...]",
       stats: [
         { label: "Təhsil", value: "Hüquqşünaslıq (Bakalavr), BDU" },
         { label: "İxtisaslaşma", value: "Müqavilə Hüququ və Legal Tech" },
@@ -45,7 +45,7 @@ window.SITE_CONTENT = {
     experience: {
       eyebrow: "Bölmə 02 — Təcrübə",
       title: "Peşəkar Təcrübə",
-      subtitle: "Hüquqi təcrübəm, könüllülük fəaliyyətim və məhkəmə sistemi ilə bağlı qazandığım praktiki biliklərin xülasəsi.",
+      subtitle: "Hüquqi təcrübəm, könüllülük fəaliyyətim və məhkəmə sistemi ilə bağlı qazandığım praktiki biliklərin qısa xülasəsi.",
       items: [
         {
           period: "İyul 2026 — Hazırda",
@@ -91,26 +91,90 @@ window.SITE_CONTENT = {
           period: "2026 — Hazırda",
           title: "İnformasiya Hüququ",
           org: "Bakı Dövlət Universiteti",
-          bullets: ["İnformasiya hüququ sahəsində biliklərimi dərinləşdirməyə və müasir hüquqi çağırışları öyrənməyə davam edirəm."]
+          bullets: ["İnformasiya hüququ sahəsində biliklərimi dərinləşdirməyə davam edirəm."]
+        },
+        {
+          period: "2026 — Hal-Hazırda",
+          title: "İnformasiya Hüququ",
+          org: "Bakı Dövlət Universiteti",
+          bullets: [
+            "İnformasiya Hüququ və Rəqəmsal Hüquq.",
+            "Tədqiqat: Hüquqi rəqəmsallaşma və məlumatların qorunması."
+          ]
         }
       ]
     },
+    skills: {
+      eyebrow: "Bölmə 04 — Bacarıqlar",
+      title: "Bacarıqlar",
+      categories: [
+        {
+          title: "Hüquqi Bacarıqlar",
+          items: ["Hüquqi Araşdırma", "Hüquqi Sənədlərin Hazırlanması", "Müqavilə Hüququ", "Hüquqi Yazı"]
+        },
+        {
+          title: "Legal Tech və Rəqəmsal Alətlər",
+          items: ["Legal Tech", "Generativ Süni İntellekt Alətləri", "Python", "Hüquqi Data Analizi", "MS Office"]
+        },
+        {
+          title: "Peşəkar Bacarıqlar",
+          items: ["Analitik Düşüncə", "Problem Həll Etmə", "Komanda ilə İş", "İctimai Çıxış"]
+        }
+      ],
+      languagesTitle: "Dil Bilikləri",
+      languages: [
+        { name: "Azərbaycan dili", level: "Ana dili" },
+        { name: "İngilis dili", level: "C1 (Dinləmə: C2)" },
+        { name: "Türk dili", level: "C1" },
+        { name: "İspan dili", level: "A2" },
+        { name: "Rus dili", level: "A1" }
+      ]
+    },
+    certifications: {
+      eyebrow: "Bölmə 05 — Sertifikatlar",
+      title: "Sertifikatlar",
+      items: [
+        {
+          seal: "YALE",
+          title: "Amerika Müqavilə Hüququ I",
+          issuer: "Yale Universiteti · Coursera · İyun 2026",
+          description: "Amerika Ümumi Hüququnun müqavilə hüququ üzrə əsas prinsiplərini öyrənmişəm."
+        }
+      ]
+    },
+    projects: {
+      eyebrow: "Bölmə 06 — Layihələr",
+      title: "Layihələr",
+      tagline: "Təsisçi və Kontent Yaradıcısı",
+      itemTitle: "\"Saniyəlik Hüquq\"",
+      description: "Legal Design prinsiplərindən istifadə edərək mürəkkəb hüquqi mövzuları sadə, anlaşılan və vizual formada təqdim edirəm.",
+      tags: ["Legal Design", "Mülki Hüquq", "Əmək Hüququ", "Ailə Hüququ"],
+      bullets: [
+        "Mülki, əmək və ailə hüququna dair mövzuları infoqrafik formatına çevirərək 780-dən çox izləyicidən ibarət orqanik auditoriya formalaşdırmışam.",
+        "Araşdırma, məzmunun hazırlanması, dizayn və yayımlanma daxil olmaqla bütün istehsal prosesini müstəqil idarə edərək 40,000-dən çox ümumi baxış əldə etmişəm.",
+        "Layihənin təsisçisi olaraq strateji inkişaf, kontent planlaşdırılması və yaradıcı qərarların hamısını müstəqil şəkildə həyata keçirmişəm."
+      ]
+    },
     contact: {
+      eyebrow: "Bölmə 07 — Əlaqə",
       title: "Əlaqə",
-      emailLabel: "E-poçt",
-      messageLabel: "Mesaj"
-    }
+      description: "Bakıda və digər regionlarda hüquq və Legal Tech sahəsində karyera imkanlarına açığam. Mənimlə əlaqə saxlamağın ən sürətli yolu elektron poçtdur.",
+      email: { label: "E-poçt", value: "rafaelfarzaliyev@outlook.com" },
+      phone: { label: "Telefon", value: "+994 55 292 18 18" },
+      linkedin: { label: "LinkedIn", value: "linkedin.com/in/rafaelfarzaliyev" }
+    },
+    footer: "Bakı, Azərbaycan • Hüquq və texnologiyanın kəsişməsində karyera qururam."
   },
 
   en: {
     meta: {
-      title: "Rafael Farzaliyev — Law Graduate & Legal Tech",
-      description: "Law graduate from Baku State University. Interested in corporate law, contract law, and Legal Tech."
+      title: "Rafael Farzaliyev — Lawyer & Legal Tech",
+      description: "Law graduate from Baku State University with practical experience in corporate legal practice and a growing interest in Legal Tech."
     },
     skip: "Skip to content",
     themeToggleLabel: "Toggle dark mode",
     menuToggleLabel: "Open menu",
-    langToggleLabel: "Change language",
+    langToggleLabel: "Switch language",
     nav: {
       about: "About",
       experience: "Experience",
@@ -121,86 +185,137 @@ window.SITE_CONTENT = {
       contact: "Contact"
     },
     hero: {
-      docket: "Baku, Azerbaijan — Law graduate (2026)",
+      docket: "Based in Baku, Azerbaijan — LL.B. Graduate (2026)",
       nameFirst: "Rafael",
       nameLast: "Farzaliyev",
-      role: "LAW GRADUATE • LEGAL TECH • CONTRACT LAW",
-      lede: "I graduated from Baku State University's Faculty of Law and have gained practical experience in corporate law and court procedures. I am actively developing projects in Legal Tech and legal design, focusing on contract and information law.",
-      ctaContact: "Contact",
-      ctaExperience: "View experience",
+      role: "LAWYER • LEGAL TECH • CONTRACT LAW",
+      lede: "I graduated from the Faculty of Law at Baku State University and gained practical experience in corporate legal practice and courtroom proceedings. My current focus is on Legal Tech [...]",
+      ctaContact: "Contact Me",
+      ctaExperience: "View Experience",
       ctaDownload: "Download CV",
       portraitTitle: "Portrait",
-      portraitBody: "Add assets/images/portrait.jpg — the image will appear here automatically."
+      portraitBody: "Add assets/images/portrait.jpg and your profile photo will appear here automatically."
     },
     about: {
       eyebrow: "Section 01 — About",
       title: "About Rafael",
-      p1: "I enjoy combining analytical thinking with a legal approach — from drafting contracts to analyzing court materials.",
-      p2: "As a legal intern at \"Azerbaijan Railways\" JSC, I worked on corporate contracts and legal research.",
-      p3: "I am the founder of the \"Saniyelik Huquq\" project — presenting complex legal topics in simple visual formats.",
+      p1: "I enjoy combining legal reasoning with an analytical mindset—from drafting contracts to reviewing case materials.",
+      p2: "As a Legal Trainee at Azerbaijan Railways (ADY) CJSC, I worked on corporate contracts and legal research.",
+      p3: "Outside my professional work, I founded 'Saniyəlik Hüquq', a legal education initiative that transforms complex Azerbaijani legislation into clear and accessible visual content using Legal Design principles.",
       stats: [
-        { label: "Education", value: "LLB, Baku State University" },
-        { label: "Specialization", value: "Contract Law & Legal Tech" },
+        { label: "Education", value: "LL.B., Baku State University" },
+        { label: "Focus", value: "Contract Law & Legal Tech" },
         { label: "Languages", value: "Azerbaijani • English • Turkish • Spanish" },
         { label: "Location", value: "Baku, Azerbaijan" }
       ]
-    }
-    // other English keys omitted for brevity but can be added as needed
+    },
+    experience: {
+      eyebrow: "Section 02 — Experience",
+      title: "Professional Experience",
+      subtitle: "A summary of my legal internships, volunteer work, and practical courtroom experience.",
+      items: [
+        {
+          period: "July 2026 — Present",
+          title: "Legal Trainee",
+          org: "Azerbaijan Railways (ADY) CJSC",
+          bullets: [
+            "Drafted and reviewed corporate contracts and official correspondence.",
+            "Conducted legal research to ensure compliance with applicable legislation.",
+            "Supported daily corporate legal and governance activities."
+          ]
+        },
+        {
+          period: "October 2024 — March 2025",
+          title: "Volunteer",
+          org: "Femida Advocacy Module",
+          bullets: [
+            "Completed an intensive training program in advocacy and legal drafting.",
+            "Analyzed case materials and developed defence strategies through simulated court proceedings."
+          ]
+        },
+        {
+          period: "August 2024 — September 2024",
+          title: "Volunteer",
+          org: "Baku Court on Grave Crimes",
+          bullets: [
+            "Observed judges during complex criminal proceedings, gaining practical insight into the application of the Criminal Procedure Code.",
+            "Conducted legal research and reviewed case materials in support of court documentation."
+          ]
+        }
+      ]
+    },
+    education: {
+      eyebrow: "Section 03 — Education",
+      title: "Education",
+      items: [
+        {
+          period: "2022 — 2026",
+          title: "LL.B. (Law)",
+          org: "Baku State University",
+          bullets: ["Studied the fundamentals of civil, criminal and procedural law over a four-year undergraduate program."]
+        },
+        {
+          period: "2026 — Present",
+          title: "Information Law (ongoing)",
+          org: "Baku State University",
+          bullets: ["Continuing studies in information law and contemporary legal challenges."]
+        },
+        {
+          period: "2026 — Ongoing",
+          title: "İnformation Law",
+          org: "Baku State University",
+          bullets: [
+            "Concentration: Information Law and Digital Rights.",
+            "Research: Legal digitization and data protection."
+          ]
+        }
+      ]
+    },
+    skills: {
+      eyebrow: "Section 04 — Skills",
+      title: "Skills",
+      categories: [
+        { title: "Legal Skills", items: ["Legal Research", "Legal Drafting", "Contract Law", "Legal Writing"] },
+        { title: "Legal Tech & Tools", items: ["Legal Tech", "Generative AI Tools", "Python", "Legal Data Analysis", "MS Office"] },
+        { title: "Professional Skills", items: ["Analytical Thinking", "Problem Solving", "Teamwork", "Public Speaking"] }
+      ],
+      languagesTitle: "Languages",
+      languages: [
+        { name: "Azerbaijani", level: "Native" },
+        { name: "English", level: "C1 (Listening: C2)" },
+        { name: "Turkish", level: "C1" },
+        { name: "Spanish", level: "A2" },
+        { name: "Russian", level: "A1" }
+      ]
+    },
+    certifications: {
+      eyebrow: "Section 05 — Certifications",
+      title: "Certifications",
+      items: [
+        { seal: "YALE", title: "American Contract Law I", issuer: "Yale University · Coursera · June 2026", description: "Studied core principles of contract law under U.S. common law (offer, a[...]" }
+      ]
+    },
+    projects: {
+      eyebrow: "Section 06 — Projects",
+      title: "Projects",
+      tagline: "Founder & Content Creator",
+      itemTitle: "Saniyəlik Hüquq",
+      description: "Using Legal Design principles I turn complex legal topics into simple, visually engaging educational content.",
+      tags: ["Legal Design", "Civil Law", "Labour Law", "Family Law"],
+      bullets: [
+        "Converted complex civil, labour and family law topics into infographics, building an organic audience of 780+ followers.",
+        "Managed full production — research, design, editing, publishing — achieving 40,000+ total views on content.",
+        "Led strategy, content planning and creative direction as the project's founder."
+      ]
+    },
+    contact: {
+      eyebrow: "Section 07 — Contact",
+      title: "Contact",
+      description: "Open to opportunities in law and Legal Tech in Baku and beyond. Email is the fastest way to reach me.",
+      email: { label: "Email", value: "rafaelfarzaliyev@outlook.com" },
+      phone: { label: "Phone", value: "+994 55 292 18 18" },
+      linkedin: { label: "LinkedIn", value: "linkedin.com/in/rafaelfarzaliyev" }
+    },
+    footer: "Baku, Azerbaijan • Building a career at the intersection of law and technology."
   }
 };
-
-// Auto-apply translations to elements with data-i18n attributes to override any placeholders/truncated text.
-(function () {
-  function resolvePath(obj, path) {
-    // Supports array indexes like stats[0].value
-    try {
-      const parts = path.replace(/\]/g, '').split(/\.|\[/).filter(Boolean);
-      return parts.reduce((acc, key) => (acc ? acc[key] : undefined), obj);
-    } catch (e) {
-      return undefined;
-    }
-  }
-
-  function applyTranslations(lang) {
-    const root = window.SITE_CONTENT && window.SITE_CONTENT[lang] ? window.SITE_CONTENT[lang] : window.SITE_CONTENT.az;
-    if (!root) return;
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      const val = resolvePath(root, key);
-      if (val === undefined) return;
-      // If element is an input/textarea, set placeholder, otherwise set textContent
-      const tag = el.tagName.toLowerCase();
-      if (tag === 'input' || tag === 'textarea') {
-        el.placeholder = val;
-      } else if (el.hasAttribute('data-i18n-html')) {
-        el.innerHTML = val;
-      } else {
-        el.textContent = val;
-      }
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    // Determine language: preference in localStorage, else .lang-btn[aria-pressed=true], else default 'az'
-    var lang = localStorage.getItem('site_lang');
-    if (!lang) {
-      var activeBtn = document.querySelector('.lang-btn[aria-pressed="true"]');
-      lang = activeBtn ? activeBtn.dataset.lang : 'az';
-    }
-    applyTranslations(lang);
-
-    // Listen for language toggle clicks and reapply
-    var langToggle = document.getElementById('lang-toggle');
-    if (langToggle) {
-      langToggle.addEventListener('click', function (e) {
-        var btn = e.target.closest('.lang-btn');
-        if (!btn) return;
-        var selected = btn.dataset.lang;
-        localStorage.setItem('site_lang', selected);
-        // Update aria-pressed on buttons
-        document.querySelectorAll('.lang-btn').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === selected ? 'true' : 'false'));
-        applyTranslations(selected);
-      });
-    }
-  });
-})();
