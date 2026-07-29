@@ -22,7 +22,7 @@ window.SITE_CONTENT = {
       nameFirst: "Rəfael",
       nameLast: "Fərzəliyev",
       role: "HÜQUQŞÜNAS • LEGAL TECH • MÜQAVİLƏ HÜQUQU",
-      lede: "Bakı Dövlət Universitetinin Hüquq fakültəsini bitirmişəm və korporativ hüquq sahəsində, eləcə də məhkəmə proseslərində praktiki təcrübə qazanmışam. Hazırda Legal Tech və müqavilə hüququ üzrə öz bacarıqlarımı inkişaf etdirirəm.",
+      lede: "Bakı Dövlət Universitetinin Hüquq fakültəsini bitirmişəm və korporativ hüquq sahəsində, eləcə də məhkəmə proseslərində praktiki təcrübə qazanmışam. Hazırda L[...]",
       ctaContact: "Əlaqə saxla",
       ctaExperience: "Təcrübəyə bax",
       ctaDownload: "CV-ni yüklə",
@@ -34,7 +34,7 @@ window.SITE_CONTENT = {
       title: "Rəfael haqqında",
       p1: "Analitik düşüncə ilə hüquqi yanaşmanı birləşdirməyi sevirəm — müqavilələrin hazırlanmasından məhkəmə materiallarının təhlilinə qədər.",
       p2: "\"Azərbaycan Dəmir Yolları\" QSC-də hüquq təcrübəçisi kimi korporativ müqavilələrin hazırlanması və hüquqi araşdırmalar üzərində çalışmışam.",
-      p3: "Bununla yanaşı, \"Saniyəlik Hüquq\" layihəsinin təsisçisiyəm. Layihə çərçivəsində mürəkkəb hüquqi mövzuları hüquqi dizayn prinsipləri əsasında sadə və vizual formada təqdim edirəm.",
+      p3: "Bununla yanaşı, \"Saniyəlik Hüquq\" layihəsinin təsisçisiyəm. Layihə çərçivəsində mürəkkəb hüquqi mövzuları hüquqi dizayn prinsipləri əsasında sadə və vizual f[...]",
       stats: [
         { label: "Təhsil", value: "Hüquqşünaslıq (Bakalavr), BDU" },
         { label: "İxtisaslaşma", value: "Müqavilə Hüququ və Legal Tech" },
@@ -92,6 +92,16 @@ window.SITE_CONTENT = {
           title: "İnformasiya Hüququ",
           org: "Bakı Dövlət Universiteti",
           bullets: ["İnformasiya hüququ sahəsində biliklərimi dərinləşdirməyə davam edirəm."]
+        },
+        // Draft master's entry — placeholder; edit later as needed
+        {
+          period: "2026 — 2028",
+          title: "Magistratura (Hüquq) — Draft",
+          org: "Bakı Dövlət Universiteti",
+          bullets: [
+            "Konsentrasiya: İnformasiya Hüququ və Rəqəmsal Hüquq (draft entry).",
+            "Tədqiqat: Hüquqi rəqəmsallaşma və məlumatların qorunması (nümunə)."
+          ]
         }
       ]
     },
@@ -180,7 +190,7 @@ window.SITE_CONTENT = {
       nameFirst: "Rafael",
       nameLast: "Farzaliyev",
       role: "LAWYER • LEGAL TECH • CONTRACT LAW",
-      lede: "I graduated from the Faculty of Law at Baku State University and gained practical experience in corporate legal practice and courtroom proceedings. My current focus is on Legal Tech and contract law.",
+      lede: "I graduated from the Faculty of Law at Baku State University and gained practical experience in corporate legal practice and courtroom proceedings. My current focus is on Legal Tech [...]",
       ctaContact: "Contact Me",
       ctaExperience: "View Experience",
       ctaDownload: "Download CV",
@@ -244,6 +254,22 @@ window.SITE_CONTENT = {
           title: "LL.B. (Law)",
           org: "Baku State University",
           bullets: ["Studied the fundamentals of civil, criminal and procedural law over a four-year undergraduate program."]
+        },
+        {
+          period: "2026 — Present",
+          title: "Information Law (ongoing)",
+          org: "Baku State University",
+          bullets: ["Continuing studies in information law and contemporary legal challenges."]
+        },
+        // Draft master's entry — placeholder; edit later as needed
+        {
+          period: "2026 — 2028",
+          title: "Master's (Law) — Draft",
+          org: "Baku State University",
+          bullets: [
+            "Concentration: Information Law and Digital Rights (draft entry).",
+            "Research: Legal digitization and data protection (example)."
+          ]
         }
       ]
     },
@@ -268,7 +294,7 @@ window.SITE_CONTENT = {
       eyebrow: "Section 05 — Certifications",
       title: "Certifications",
       items: [
-        { seal: "YALE", title: "American Contract Law I", issuer: "Yale University · Coursera · June 2026", description: "Studied core principles of contract law under U.S. common law (offer, acceptance, consideration, promissory estoppel)." }
+        { seal: "YALE", title: "American Contract Law I", issuer: "Yale University · Coursera · June 2026", description: "Studied core principles of contract law under U.S. common law (offer, a[...]" }
       ]
     },
     projects: {
