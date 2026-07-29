@@ -92,15 +92,6 @@ window.SITE_CONTENT = {
           title: "İnformasiya Hüququ",
           org: "Bakı Dövlət Universiteti",
           bullets: ["İnformasiya hüququ sahəsində biliklərimi dərinləşdirməyə davam edirəm."]
-        },
-        {
-          period: "2026 — Hal-Hazırda",
-          title: "İnformasiya Hüququ",
-          org: "Bakı Dövlət Universiteti",
-          bullets: [
-            "İnformasiya Hüququ və Rəqəmsal Hüquq.",
-            "Tədqiqat: Hüquqi rəqəmsallaşma və məlumatların qorunması."
-          ]
         }
       ]
     },
@@ -253,12 +244,6 @@ window.SITE_CONTENT = {
           title: "LL.B. (Law)",
           org: "Baku State University",
           bullets: ["Studied the fundamentals of civil, criminal and procedural law over a four-year undergraduate program."]
-        },
-        {
-          period: "2026 — Present",
-          title: "Information Law (ongoing)",
-          org: "Baku State University",
-          bullets: ["Continuing studies in information law and contemporary legal challenges."]
         },
         {
           period: "2026 — Ongoing",
