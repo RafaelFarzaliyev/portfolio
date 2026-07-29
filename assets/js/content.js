@@ -1,167 +1,212 @@
-/* =========================================================================
-   SITE CONTENT — single source of truth for every piece of text on the site.
-   Edit the strings below to update the site; you never need to touch
-   index.html to change wording. Keep the "az" and "en" objects the same
-   shape (same keys, same array lengths) so the language toggle keeps
-   working correctly.
-   ========================================================================= */
-
-window.SITE_CONTENT = {
-
-  az: {
-    meta: {
-      title: "Rəfael Fərzəliyev — Hüquq Məzunu və Legal Tech",
-      description: "Rəfael Fərzəliyev — Bakı Dövlət Universitetinin hüquq məzunu; korporativ hüquq sahəsində çalışır, Legal Tech-ə maraq göstərir."
-    },
-    skip: "Məzmuna keç",
-    themeToggleLabel: "Tünd rejimi aç/bağla",
-    menuToggleLabel: "Menyunu aç",
-    langToggleLabel: "Dili dəyiş",
-    nav: {
-      about: "Haqqımda",
-      experience: "Təcrübə",
-      education: "Təhsil",
-      skills: "Bacarıqlar",
-      certifications: "Sertifikatlar",
-      projects: "Layihələr",
-      contact: "Əlaqə"
-    },
-    hero: {
-      docket: "Bakı, Azərbaycanda qeydə alınıb — 2026 məzunu, Hüquq fakültəsi",
-      nameFirst: "Rəfael",
-      nameLast: "Fərzəliyev",
-      role: "HÜQUQ MƏZUNU — LEGAL TECH VƏ MÜQAVİLƏ HÜQUQU",
-      lede: "Bakı Dövlət Universitetinin Hüquq fakültəsini bitirmişəm, korporativ hüquq və məhkəmə prosesləri ilə birbaşa işləmişəm. Hazırda diqqətimi Legal Tech-ə yönəldirəm: Python və data analitikası ilə hüquqi iş prosesini sadələşdirməyə çalışıram.",
-      ctaContact: "Əlaqə saxla",
-      ctaExperience: "Təcrübəyə bax",
-      ctaDownload: "CV Yüklə",
-      portraitTitle: "Şəkil üçün yer",
-      portraitBody: "assets/images/portrait.jpg faylını əlavə edin — şəkil avtomatik burda görünəcək"
-    },
-    about: {
-      eyebrow: "Bölmə 01 — Bəyanat",
-      title: "Rəfael haqqında",
-      p1: "Hüquqi düşüncəni analitik yanaşma ilə birləşdirməyi sevirəm — müqavilə hazırlığından məhkəmə sənədlərinin təhlilinə qədər. Universitet mənə nəzəri bazanı verdi, amma hüququn necə işlədiyini əsl mənada praktikada anladım. Elə buna görə də Legal Tech mənim üçün təbii bir istiqamətə çevrildi.",
-      p2: "\"Azərbaycan Dəmir Yolları\" QSC-də hüquq təcrübəçisi kimi korporativ müqavilələr üzərində işləmişəm, Bakı Ağır Cinayətlər Məhkəməsində hakimlərin yanında müşahidəçi olmuşam, \"Femida\" Vəkillik Modulunda isə simulyasiya edilmiş məhkəmə işləri vasitəsilə vəkillik və sənədləşmə bacarıqlarımı inkişaf etdirmişəm.",
-      p3: "Formal hüquqi işdən kənarda \"Saniyəlik Hüquq\" layihəsinin təsisçisiyəm — mürəkkəb Azərbaycan qanunvericiliyini sadə və vizual formada izah edən ictimai layihə, hazırda 780+ izləyici və 40,000+ ümumi baxışa çatıb. Bu təcrübə mənə göstərdi ki, hüquq yalnız sənəddə deyil, düzgün izahatda da yaşayır.",
-      stats: [
-        { label: "Təhsil", value: "Hüquqşünaslıq (Bakalavr), BDU" },
-        { label: "İstiqamət", value: "Müqavilə Hüququ və Legal Tech" },
-        { label: "Dillər", value: "Azərbaycan · İngilis · Türk · İspan" },
-        { label: "Yer", value: "Bakı, Azərbaycan" }
-      ]
-    },
-    experience: {
-      eyebrow: "Bölmə 02 — Qeyd",
-      title: "Peşəkar Təcrübə",
-      subtitle: "Hüquqi təcrübələrimin, könüllülük fəaliyyətimin və məhkəmə prosesləri ilə tanışlığımın qısa xülasəsi.",
-      items: [
-        {
-          period: "İyul 2026 — Hal-hazırda",
-          title: "Təcrübəçi (Hüquq)",
-          org: "\"Azərbaycan Dəmir Yolları\" QSC",
-          bullets: [
-            "Korporativ müqavilələri və rəsmi məktubları tərtib etmişəm və yoxlamışam.",
-            "Normativ uyğunluğu təmin etmək üçün hüquqi araşdırmalar aparmışam.",
-            "Gündəlik korporativ idarəetmə proseslərinə dəstək olmuşam."
-          ]
-        },
-        {
-          period: "Oktyabr 2024 — Mart 2025",
-          title: "Könüllü",
-          org: "\"Femida\" Vəkillik Modulu",
-          bullets: [
-            "Vəkillik və hüquqi sənədləşmə üzrə intensiv təlim proqramını tamamlamışam.",
-            "Real məhkəmə proseslərində iş materiallarını təhlil etmiş, müdafiə strategiyaları hazırlamışam."
-          ]
-        },
-        {
-          period: "Avqust 2024 — Sentyabr 2024",
-          title: "Könüllü",
-          org: "Bakı Ağır Cinayətlər Məhkəməsi",
-          bullets: [
-            "Mürəkkəb cinayət işlərində hakimlərin yanında müşahidəçi olaraq Cinayət Prosessual Məcəlləsinin praktik tətbiqini izləmişəm.",
-            "Məhkəmə sənədlərinin hazırlanmasına dəstək üçün araşdırma aparmış, işləri təhlil etmişəm."
-          ]
-        }
-      ]
-    },
-    education: {
-      eyebrow: "Bölmə 03 — Baza",
-      title: "Təhsil",
-      items: [
-        {
-          period: "2022 — 2026",
-          title: "Hüquqşünaslıq (Bakalavr)",
-          org: "Bakı Dövlət Universiteti",
-          bullets: [
-            "Dörd il ərzində mülki, cinayət və prosessual hüququn əsaslarını öyrənmişəm."
-          ]
-        }
-      ]
-    },
-    skills: {
-      eyebrow: "Bölmə 04 — Səlahiyyətlər",
-      title: "Bacarıqlar",
-      categories: [
-        { title: "Hüquqi Bacarıqlar", items: ["Hüquqi Araşdırma və Sənədləşmə", "Müqavilə Hüququ", "Hüquqi Yazı"] },
-        { title: "Legal Tech və Proqramlar", items: ["Legal Tech (Hüquqi Texnologiyalar)", "AI (Süni İntellekt) Alətləri", "MS Office Paketi", "Data Analizi", "Python"] },
-        { title: "Peşəkar Bacarıqlar", items: ["Analitik Düşüncə", "İctimai Çıxış", "Komanda İşi", "Problem Həll Etmə"] }
-      ],
-      languagesTitle: "Dillər",
-      languages: [
-        { name: "Azərbaycan dili", level: "Ana dili" },
-        { name: "İngilis dili", level: "C1 · Dinləmə C2" },
-        { name: "Türk dili", level: "C1" },
-        { name: "İspan dili", level: "A2" },
-        { name: "Rus dili", level: "A1" }
-      ]
-    },
+az: {
+  meta: {
+    title: "Rəfael Fərzəliyev — Hüquqşünas və Legal Tech",
+    description: "Bakı Dövlət Universitetinin hüquq məzunu. Korporativ hüquq, müqavilə hüququ və Legal Tech sahələrində maraqlanır."
+  },
+  skip: "Məzmuna keç",
+  themeToggleLabel: "Tünd rejimi aç/bağla",
+  menuToggleLabel: "Menyunu aç",
+  langToggleLabel: "Dili dəyiş",
+  nav: {
+    about: "Haqqımda",
+    experience: "Təcrübə",
+    education: "Təhsil",
+    skills: "Bacarıqlar",
+    certifications: "Sertifikatlar",
+    projects: "Layihələr",
+    contact: "Əlaqə"
+  },
+  hero: {
+    docket: "Bakı, Azərbaycan — Hüquq məzunu (2026)",
+    nameFirst: "Rəfael",
+    nameLast: "Fərzəliyev",
+    role: "HÜQUQŞÜNAS • LEGAL TECH • MÜQAVİLƏ HÜQUQU",
+    lede: "Bakı Dövlət Universitetinin Hüquq fakültəsini bitirmişəm və korporativ hüquq sahəsində, eləcə də məhkəmə proseslərində praktiki təcrübə qazanmışam. Hazırda əsas maraq dairəm Legal Tech-dir və Python ilə data analizindən istifadə edərək hüquqi iş proseslərini daha səmərəli etməyə çalışıram.",
+    ctaContact: "Əlaqə saxla",
+    ctaExperience: "Təcrübəyə bax",
+    ctaDownload: "CV-ni yüklə",
+    portraitTitle: "Profil şəkli",
+    portraitBody: "assets/images/portrait.jpg faylını əlavə edin — şəkil avtomatik olaraq burada görünəcək."
+  },
+  about: {
+    eyebrow: "Bölmə 01 — Haqqımda",
+    title: "Rəfael haqqında",
+    p1: "Analitik düşüncə ilə hüquqi yanaşmanı birləşdirməyi sevirəm — müqavilələrin hazırlanmasından məhkəmə materiallarının təhlilinə qədər. Universitet mənə möhkəm hüquqi nəzəri baza qazandırdı, lakin hüququn praktik tətbiqini peşə fəaliyyətində daha dərindən mənimsədim. Məhz bu təcrübə məni Legal Tech istiqamətinə yönəltdi.",
+    p2: "\"Azərbaycan Dəmir Yolları\" QSC-də hüquq təcrübəçisi kimi korporativ müqavilələrin hazırlanması və hüquqi araşdırmalar üzərində çalışmışam. Bakı Ağır Cinayətlər Məhkəməsində hakimlərin fəaliyyətini müşahidə edərək cinayət mühakimə icraatının praktik tətbiqi ilə tanış olmuşam. \"Femida\" Vəkillik Modulunda isə simulyasiya edilmiş məhkəmə prosesləri vasitəsilə hüquqi yazı və vəkillik bacarıqlarımı inkişaf etdirmişəm.",
+    p3: "Bununla yanaşı, \"Saniyəlik Hüquq\" layihəsinin təsisçisiyəm. Layihə çərçivəsində mürəkkəb hüquqi mövzuları hüquqi dizayn (Legal Design) prinsipləri əsasında sadə və vizual formada izah edirəm. Hazırda layihə 780-dən çox izləyici və 40.000-dən artıq ümumi baxış toplayıb. Bu təcrübə mənə göstərdi ki, hüququn dəyəri yalnız qanun mətnində deyil, onun insanların anlaya biləcəyi şəkildə izah edilməsindədir.",
+    stats: [
+      { label: "Təhsil", value: "Hüquqşünaslıq (Bakalavr), BDU" },
+      { label: "İxtisaslaşma", value: "Müqavilə Hüququ və Legal Tech" },
+      { label: "Dillər", value: "Azərbaycan • İngilis • Türk • İspan" },
+      { label: "Məkan", value: "Bakı, Azərbaycan" }
+    ]
+  },
+  experience: {
+    eyebrow: "Bölmə 02 — Təcrübə",
+    title: "Peşəkar Təcrübə",
+    subtitle: "Hüquqi təcrübəm, könüllülük fəaliyyətim və məhkəmə sistemi ilə bağlı qazandığım praktiki biliklərin qısa xülasəsi.",
+    items: [
+      {
+        period: "İyul 2026 — Hazırda",
+        title: "Hüquq Təcrübəçisi",
+        org: "\"Azərbaycan Dəmir Yolları\" QSC",
+        bullets: [
+          "Korporativ müqavilələrin və rəsmi yazışmaların hazırlanması və hüquqi ekspertizasını həyata keçirmişəm.",
+          "Qanunvericiliyin tələblərinə uyğunluğu təmin etmək məqsədilə hüquqi araşdırmalar aparmışam.",
+          "Gündəlik korporativ hüquqi və idarəetmə fəaliyyətlərinə dəstək göstərmişəm."
+        ]
+      },
+      {
+        period: "Oktyabr 2024 — Mart 2025",
+        title: "Könüllü",
+        org: "\"Femida\" Vəkillik Modulu",
+        bullets: [
+          "Vəkillik fəaliyyəti və hüquqi sənədlərin hazırlanması üzrə intensiv təlim proqramını uğurla tamamlamışam.",
+          "Simulyasiya edilmiş məhkəmə prosesləri çərçivəsində iş materiallarını təhlil etmiş və müdafiə strategiyalarının hazırlanmasında iştirak etmişəm."
+        ]
+      },
+      {
+        period: "Avqust 2024 — Sentyabr 2024",
+        title: "Könüllü",
+        org: "Bakı Ağır Cinayətlər Məhkəməsi",
+        bullets: [
+          "Hakimlərin fəaliyyətini müşahidə edərək Cinayət Prosessual Məcəlləsinin praktik tətbiqi ilə tanış olmuşam.",
+          "Məhkəmə sənədlərinin hazırlanmasına dəstək məqsədilə hüquqi araşdırmalar aparmış və iş materiallarını təhlil etmişəm."
+        ]
+      }
+    ]
+  },
+  education: {
+    eyebrow: "Bölmə 03 — Təhsil",
+    title: "Təhsil",
+    items: [
+      {
+        period: "2022 — 2026",
+        title: "Hüquqşünaslıq (Bakalavr)",
+        org: "Bakı Dövlət Universiteti",
+        bullets: [
+          "Dörd il ərzində mülki, cinayət və prosessual hüququn əsaslarını öyrənmişəm."
+        ]
+      },
+      {
+        period: "2026 — Hazırda",
+        title: "İnformasiya Hüququ",
+        org: "Bakı Dövlət Universiteti",
+        bullets: [
+          "İnformasiya hüququ sahəsində biliklərimi dərinləşdirməyə və müasir hüquqi çağırışları öyrənməyə davam edirəm."
+        ]
+      }
+    ]
+  },
+  skills: {
+    eyebrow: "Bölmə 04 — Bacarıqlar",
+    title: "Bacarıqlar",
+    categories: [
+      {
+        title: "Hüquqi Bacarıqlar",
+        items: [
+          "Hüquqi Araşdırma",
+          "Hüquqi Sənədlərin Hazırlanması",
+          "Müqavilə Hüququ",
+          "Hüquqi Yazı"
+        ]
+      },
+      {
+        title: "Legal Tech və Rəqəmsal Alətlər",
+        items: [
+          "Legal Tech",
+          "Generativ Süni İntellekt Alətləri",
+          "Python",
+          "Hüquqi Data Analizi",
+          "MS Office"
+        ]
+      },
+      {
+        title: "Peşəkar Bacarıqlar",
+        items: [
+          "Analitik Düşüncə",
+          "Problem Həll Etmə",
+          "Komanda ilə İş",
+          "İctimai Çıxış"
+        ]
+      }
+    ],
+    languagesTitle: "Dil Bilikləri",
+    languages: [
+      { name: "Azərbaycan dili", level: "Ana dili" },
+      { name: "İngilis dili", level: "C1 (Dinləmə: C2)" },
+      { name: "Türk dili", level: "C1" },
+      { name: "İspan dili", level: "A2" },
+      { name: "Rus dili", level: "A1" }
+    ]
+  },
     certifications: {
-      eyebrow: "Bölmə 05 — Sənədlər",
+      eyebrow: "Bölmə 05 — Sertifikatlar",
       title: "Sertifikatlar",
       items: [
         {
           seal: "YALE",
           title: "Amerika Müqavilə Hüququ I",
-          issuer: "Yale Universiteti — Coursera vasitəsilə — İyun 2026",
-          description: "Kursda Amerika Ümumi Hüququnun (Common Law) əsas prinsiplərini öyrəndim — müqavilələrin bağlanması, əvəz (consideration), promissory estoppel (vədə əsaslanan etibarlılıq), təfsir qaydaları və müqaviləyəqədərki məsuliyyət daxil olmaqla."
+          issuer: "Yale Universiteti · Coursera · İyun 2026",
+          description: "Amerika Ümumi Hüququnun (Common Law) müqavilə hüququ üzrə əsas prinsiplərini öyrənmişəm. Kurs müqavilələrin bağlanması, consideration, promissory estoppel, müqavilələrin şərhi və müqaviləyəqədərki məsuliyyət kimi mövzuları əhatə edib."
         }
       ]
     },
+
     projects: {
-      eyebrow: "Bölmə 06 — Təşəbbüs",
+      eyebrow: "Bölmə 06 — Layihələr",
       title: "Layihələr",
       tagline: "Təsisçi və Kontent Yaradıcısı",
       itemTitle: "\"Saniyəlik Hüquq\"",
-      description: "\"Hüquqi Dizayn\" prinsipləri ilə mürəkkəb hüquqi mövzuları hamı üçün anlaşılan formaya salıram.",
-      tags: ["Hüquqi Dizayn", "Mülki Hüquq", "Əmək Hüququ", "Ailə Hüququ"],
+      description: "Legal Design prinsiplərindən istifadə edərək mürəkkəb hüquqi mövzuları sadə, anlaşılan və vizual formada təqdim edirəm.",
+      tags: [
+        "Legal Design",
+        "Mülki Hüquq",
+        "Əmək Hüququ",
+        "Ailə Hüququ"
+      ],
       bullets: [
-        "Mülki, Əmək və Ailə hüququ üzrə mövzuları infoqrafikaya çevirərək 780+ izləyicidən ibarət orqanik auditoriya yaratmışam.",
-        "Araşdırmadan dizayna qədər bütün istehsal prosesini idarə edərək 40,000+ ümumi baxış (ən yüksək nəticə: 6,100+) əldə etmişəm.",
-        "Layihənin təsisçisi və rəhbəri olaraq bütün strateji və yaradıcı qərarları vermişəm."
+        "Mülki, əmək və ailə hüququna dair mövzuları infoqrafik formatına çevirərək 780-dən çox izləyicidən ibarət orqanik auditoriya formalaşdırmışam.",
+        "Araşdırma, məzmunun hazırlanması, dizayn və yayımlanma daxil olmaqla bütün istehsal prosesini müstəqil idarə edərək 40.000-dən çox ümumi baxış əldə etmişəm (ən çox baxış: 6.100+).",
+        "Layihənin təsisçisi olaraq strateji inkişaf, kontent planlaşdırılması və yaradıcı qərarların hamısını müstəqil şəkildə həyata keçirmişəm."
       ]
     },
+
     contact: {
       eyebrow: "Bölmə 07 — Əlaqə",
       title: "Əlaqə",
-      description: "Bakıda iş imkanlarına açığam. Mənə çatmağın ən sürətli yolu e-poçtdur.",
-      email: { label: "E-poçt", value: "rafaelfarzaliyev@outlook.com" },
-      phone: { label: "Telefon", value: "+994 55 292 18 18" },
-      linkedin: { label: "LinkedIn", value: "linkedin.com/in/rafaelfarzaliyev" }
+      description: "Bakıda və digər regionlarda hüquq və Legal Tech sahəsində karyera imkanlarına açığam. Mənimlə əlaqə saxlamağın ən sürətli yolu elektron poçtdur.",
+      email: {
+        label: "E-poçt",
+        value: "rafaelfarzaliyev@outlook.com"
+      },
+      phone: {
+        label: "Telefon",
+        value: "+994 55 292 18 18"
+      },
+      linkedin: {
+        label: "LinkedIn",
+        value: "linkedin.com/in/rafaelfarzaliyev"
+      }
     },
-    footer: "Bakı, Azərbaycan. Hüquq və texnologiyanı birləşdirməyə çalışıram."
+
+    footer: "Bakı, Azərbaycan • Hüquq və texnologiyanın kəsişməsində karyera qururam."
   },
 
   en: {
     meta: {
-      title: "Rafael Farzaliyev — Law Graduate & Legal Tech",
-      description: "Rafael Farzaliyev is a law graduate from Baku State University working in corporate law with a growing focus on Legal Technology."
+      title: "Rafael Farzaliyev — Lawyer & Legal Tech",
+      description: "Law graduate from Baku State University with practical experience in corporate legal practice and a growing interest in Legal Tech."
     },
+
     skip: "Skip to content",
+
     themeToggleLabel: "Toggle dark mode",
+
     menuToggleLabel: "Open menu",
+
     langToggleLabel: "Switch language",
+
     nav: {
       about: "About",
       experience: "Experience",
@@ -171,131 +216,96 @@ window.SITE_CONTENT = {
       projects: "Projects",
       contact: "Contact"
     },
+
     hero: {
-      docket: "Filed at Baku, Azerbaijan — Class of 2026, Faculty of Law",
+      docket: "Based in Baku, Azerbaijan — LL.B. Graduate (2026)",
       nameFirst: "Rafael",
       nameLast: "Farzaliyev",
-      role: "LAW GRADUATE — LEGAL TECHNOLOGY & CONTRACT LAW",
-      lede: "I graduated from the Faculty of Law at Baku State University and have worked directly with corporate legal matters and courtroom procedure. These days I'm focused on Legal Tech — using Python and data analysis to make legal workflows simpler.",
+      role: "LAWYER • LEGAL TECH • CONTRACT LAW",
+      lede: "I graduated from the Faculty of Law at Baku State University and gained practical experience in corporate legal practice and courtroom proceedings. My current focus is Legal Tech, where I explore the use of Python and data analysis to improve legal workflows.",
       ctaContact: "Contact Me",
       ctaExperience: "View Experience",
       ctaDownload: "Download CV",
-      portraitTitle: "Portrait Placeholder",
-      portraitBody: "Add assets/images/portrait.jpg — your photo will appear here automatically"
+      portraitTitle: "Portrait",
+      portraitBody: "Add assets/images/portrait.jpg and your profile photo will appear here automatically."
     },
+
     about: {
-      eyebrow: "Article 01 — Statement",
+      eyebrow: "Section 01 — About",
       title: "About Rafael",
-      p1: "I like pairing legal thinking with an analytical approach — from drafting contracts to reviewing case files. University gave me the theory; the real learning happened once I started working. That's what pulled me toward Legal Tech in the first place.",
-      p2: "As a legal trainee at \"Azerbaijan Railways\" (ADY) CJSC, I worked on corporate contracts. As a volunteer at the Baku Court on Grave Crimes, I sat in on proceedings alongside judges. And through the \"Femida\" Advocacy Module, I built advocacy and drafting skills on simulated case work.",
-      p3: "Outside formal legal work, I founded \"Saniyəlik Hüquq\" — a project that turns complex Azerbaijani legislation into plain, visual explanations. It's reached 780+ followers and 40,000+ total views so far. It taught me that law lives in how well it's explained, not just in the text itself.",
+
+      p1: "I enjoy combining legal reasoning with an analytical mindset—from drafting contracts to reviewing case materials. While university provided me with a strong legal foundation, practical experience taught me how the law operates in real-world settings. That experience naturally led me toward Legal Tech.",
+
+      p2: "As a Legal Trainee at Azerbaijan Railways (ADY) CJSC, I worked on corporate contracts and legal research. At the Baku Court on Grave Crimes, I observed judges during criminal proceedings and gained first-hand insight into courtroom practice. Through the Femida Advocacy Module, I further developed my legal drafting and advocacy skills by participating in simulated court proceedings.",
+
+      p3: "Outside my professional work, I founded 'Saniyəlik Hüquq', a legal education initiative that transforms complex Azerbaijani legislation into clear and accessible visual content using Legal Design principles. The project has grown to more than 780 followers and over 40,000 total views. It reinforced my belief that the value of law lies not only in legislation itself, but also in making it understandable.",
+
       stats: [
-        { label: "Education", value: "Bachelor of Law, BSU" },
-        { label: "Focus", value: "Contract Law & Legal Tech" },
-        { label: "Languages", value: "Azerbaijani · English · Turkish · Spanish" },
-        { label: "Based in", value: "Baku, Azerbaijan" }
+        {
+          label: "Education",
+          value: "LL.B., Baku State University"
+        },
+        {
+          label: "Focus",
+          value: "Contract Law & Legal Tech"
+        },
+        {
+          label: "Languages",
+          value: "Azerbaijani • English • Turkish • Spanish"
+        },
+        {
+          label: "Location",
+          value: "Baku, Azerbaijan"
+        }
       ]
     },
+
     experience: {
-      eyebrow: "Article 02 — Record",
+      eyebrow: "Section 02 — Experience",
+
       title: "Professional Experience",
-      subtitle: "A summary of my legal internships, volunteer work, and courtroom exposure to date.",
+
+      subtitle: "A summary of my legal internships, volunteer work, and practical courtroom experience.",
+
       items: [
         {
           period: "July 2026 — Present",
+
           title: "Legal Trainee",
-          org: "\"Azerbaijan Railways\" (ADY) CJSC",
+
+          org: "Azerbaijan Railways (ADY) CJSC",
+
           bullets: [
             "Drafted and reviewed corporate contracts and official correspondence.",
-            "Carried out legal research to keep filings compliant with current regulation.",
-            "Supported day-to-day corporate governance work."
+            "Conducted legal research to ensure compliance with applicable legislation.",
+            "Supported daily corporate legal and governance activities."
           ]
         },
+
         {
           period: "October 2024 — March 2025",
+
           title: "Volunteer",
-          org: "\"Femida\" Advocacy Module",
+
+          org: "Femida Advocacy Module",
+
           bullets: [
             "Completed an intensive training program in advocacy and legal drafting.",
-            "Analyzed case materials and built defense strategies through real courtroom exercises."
+            "Analyzed case materials and developed defence strategies through simulated court proceedings."
           ]
         },
+
         {
           period: "August 2024 — September 2024",
-          title: "Volunteer",
-          org: "Baku Court on Grave Crimes",
-          bullets: [
-            "Sat in on complex criminal proceedings alongside judges, seeing the Criminal Procedural Code applied in practice.",
-            "Researched case files to support the preparation of trial documentation."
-          ]
-        }
-      ]
-    },
-    education: {
-      eyebrow: "Article 03 — Foundation",
-      title: "Education",
-      items: [
-        {
-          period: "2022 — 2026",
-          title: "Bachelor of Law",
-          org: "Baku State University",
-          bullets: [
-            "A four-year law program covering the foundations of civil, criminal, and procedural law."
-          ]
-        }
-      ]
-    },
-    skills: {
-      eyebrow: "Article 04 — Competencies",
-      title: "Skills",
-      categories: [
-        { title: "Legal Skills", items: ["Legal Research & Drafting", "Contract Law", "Legal Writing"] },
-        { title: "Legal Tech & Software", items: ["Legal Tech", "AI Tools", "MS Office Suite", "Data Analysis", "Python"] },
-        { title: "Professional Skills", items: ["Analytical Thinking", "Public Speaking", "Team Collaboration", "Problem Solving"] }
-      ],
-      languagesTitle: "Languages",
-      languages: [
-        { name: "Azerbaijani", level: "Native" },
-        { name: "English", level: "C1 · Listening C2" },
-        { name: "Turkish", level: "C1" },
-        { name: "Spanish", level: "A2" },
-        { name: "Russian", level: "A1" }
-      ]
-    },
-    certifications: {
-      eyebrow: "Article 05 — Credentials",
-      title: "Certifications",
-      items: [
-        {
-          seal: "YALE",
-          title: "American Contract Law I",
-          issuer: "Yale University — via Coursera — June 2026",
-          description: "Covered the core principles of U.S. Common Law — contract formation, consideration, promissory estoppel, interpretation, and pre-contractual liability."
-        }
-      ]
-    },
-    projects: {
-      eyebrow: "Article 06 — Initiative",
-      title: "Projects",
-      tagline: "Founder & Content Creator",
-      itemTitle: "\"Saniyəlik Hüquq\"",
-      description: "I apply \"Legal Design\" principles to turn dense legal topics into something people can actually follow.",
-      tags: ["Legal Design", "Civil Law", "Labor Law", "Family Law"],
-      bullets: [
-        "Turned Civil, Labor, and Family Law concepts into infographics, growing an organic audience of 780+ followers.",
-        "Ran the full production cycle — research, design, editing — reaching 40,000+ total views (top post: 6,100+).",
-        "Led the project from the ground up, making every strategic and creative call."
-      ]
-    },
-    contact: {
-      eyebrow: "Article 07 — Correspondence",
-      title: "Contact",
-      description: "I'm open to legal, legal-tech, and graduate opportunities in Baku and beyond. Email is the fastest way to reach me.",
-      email: { label: "Email", value: "rafaelfarzaliyev@outlook.com" },
-      phone: { label: "Phone", value: "+994 55 292 18 18" },
-      linkedin: { label: "LinkedIn", value: "linkedin.com/in/rafaelfarzaliyev" }
-    },
-    footer: "Baku, Azerbaijan. Trying to bring law and technology closer together."
-  }
 
-};
+          title: "Volunteer",
+
+          org: "Baku Court on Grave Crimes",
+
+          bullets: [
+            "Observed judges during complex criminal proceedings, gaining practical insight into the application of the Criminal Procedure Code.",
+            "Conducted legal research and reviewed case materials in support of court documentation."
+          ]
+        }
+      ]
+    },
