@@ -22,7 +22,7 @@ window.SITE_CONTENT = {
       nameFirst: "Rəfael",
       nameLast: "Fərzəliyev",
       role: "HÜQUQŞÜNAS • LEGAL TECH • MÜQAVİLƏ HÜQUQU",
-      lede: "Bakı Dövlət Universitetinin Hüquq fakültəsini bitirmişəm və korporativ hüquq sahəsində, eləcə də məhkəmə proseslərində praktiki təcrübə qazanmışam. Hazırda L[...]",
+      lede: "Bakı Dövlət Universitetinin Hüquq fakültəsini bitirmişəm və korporativ hüquq sahəsində, eləcə də məhkəmə proseslərində praktiki təcrübə qazanmışam.",
       ctaContact: "Əlaqə saxla",
       ctaExperience: "Təcrübəyə bax",
       ctaDownload: "CV-ni yüklə",
