@@ -88,12 +88,6 @@ window.SITE_CONTENT = {
           bullets: ["Dörd il ərzində mülki, cinayət və prosessual hüququn əsaslarını öyrənmişəm."]
         },
         {
-          period: "2026 — Hazırda",
-          title: "İnformasiya Hüququ",
-          org: "Bakı Dövlət Universiteti",
-          bullets: ["İnformasiya hüququ sahəsində biliklərimi dərinləşdirməyə davam edirəm."]
-        },
-        {
           period: "2026 — Hal-Hazırda",
           title: "İnformasiya Hüququ",
           org: "Bakı Dövlət Universiteti",
@@ -201,7 +195,7 @@ window.SITE_CONTENT = {
       title: "About Rafael",
       p1: "I enjoy combining legal reasoning with an analytical mindset—from drafting contracts to reviewing case materials.",
       p2: "As a Legal Trainee at Azerbaijan Railways (ADY) CJSC, I worked on corporate contracts and legal research.",
-      p3: "Outside my professional work, I founded 'Saniyəlik Hüquq', a legal education initiative that transforms complex Azerbaijani legislation into clear and accessible visual content using Legal Design principles.",
+      p3: "Outside my professional work, I founded 'Saniyəlik Hüquq', a legal education initiative that transforms complex Azerbaijani legislation into clear and accessible visual content using[...]
       stats: [
         { label: "Education", value: "LL.B., Baku State University" },
         { label: "Focus", value: "Contract Law & Legal Tech" },
@@ -253,12 +247,6 @@ window.SITE_CONTENT = {
           title: "LL.B. (Law)",
           org: "Baku State University",
           bullets: ["Studied the fundamentals of civil, criminal and procedural law over a four-year undergraduate program."]
-        },
-        {
-          period: "2026 — Present",
-          title: "Information Law (ongoing)",
-          org: "Baku State University",
-          bullets: ["Continuing studies in information law and contemporary legal challenges."]
         },
         {
           period: "2026 — Ongoing",
