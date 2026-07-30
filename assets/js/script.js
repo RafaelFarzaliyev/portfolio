@@ -63,6 +63,48 @@
   var ogTitle = document.getElementById("og-title");
   var ogDescription = document.getElementById("og-description");
 
+  /* ---------------- Dynamic list rendering (certifications & languages) ----------------
+     These two sections come from arrays in content.js whose length can change (e.g. a new
+     certificate or a new language added via the admin tool), so they're built with DOM APIs
+     instead of fixed data-i18n indices, then re-built whenever the language is switched. */
+  function escapeHtml(str) {
+    var div = document.createElement("div");
+    div.textContent = str == null ? "" : String(str);
+    return div.innerHTML;
+  }
+
+  function renderCertifications(content) {
+    var list = document.getElementById("cert-list");
+    if (!list || !content.certifications) return;
+    var items = content.certifications.items || [];
+    list.innerHTML = items.map(function (item) {
+      return (
+        '<div class="cert-card">' +
+          '<div class="cert-seal" aria-hidden="true">' + escapeHtml(item.seal) + '</div>' +
+          '<div>' +
+            '<h3>' + escapeHtml(item.title) + '</h3>' +
+            '<span class="issuer">' + escapeHtml(item.issuer) + '</span>' +
+            '<p>' + escapeHtml(item.description) + '</p>' +
+          '</div>' +
+        '</div>'
+      );
+    }).join("");
+  }
+
+  function renderLanguages(content) {
+    var list = document.getElementById("lang-list");
+    if (!list || !content.skills) return;
+    var langs = content.skills.languages || [];
+    list.innerHTML = langs.map(function (lang) {
+      return (
+        '<li class="lang-bar-row">' +
+          '<span>' + escapeHtml(lang.name) + '</span>' +
+          '<span class="lang-level">' + escapeHtml(lang.level) + '</span>' +
+        '</li>'
+      );
+    }).join("");
+  }
+
   function applyLanguage(lang) {
     var content = window.SITE_CONTENT && window.SITE_CONTENT[lang];
     if (!content) return; // content.js failed to load — leave the pre-rendered markup as-is
@@ -72,6 +114,9 @@
       var value = resolvePath(content, key);
       if (typeof value === "string") el.textContent = value;
     });
+
+    renderCertifications(content);
+    renderLanguages(content);
 
     i18nAriaEls.forEach(function (el) {
       var key = el.getAttribute("data-i18n-aria");

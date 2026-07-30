@@ -241,12 +241,8 @@
 
         <div class="skill-card reveal">
           <h3 data-i18n="skills.languagesTitle">Dillər</h3>
-          <ul>
-            <li class="lang-bar-row"><span data-i18n="skills.languages[0].name">Azərbaycan dili</span><span class="lang-level" data-i18n="skills.languages[0].level">Ana dili</span></li>
-            <li class="lang-bar-row"><span data-i18n="skills.languages[1].name">İngilis dili</span><span class="lang-level" data-i18n="skills.languages[1].level">C1 · Dinləmə C2</span></li>
-            <li class="lang-bar-row"><span data-i18n="skills.languages[2].name">Türk dili</span><span class="lang-level" data-i18n="skills.languages[2].level">C1</span></li>
-            <li class="lang-bar-row"><span data-i18n="skills.languages[3].name">İspan dili</span><span class="lang-level" data-i18n="skills.languages[3].level">A2</span></li>
-            <li class="lang-bar-row"><span data-i18n="skills.languages[4].name">Rus dili</span><span class="lang-level" data-i18n="skills.languages[4].level">A1</span></li>
+          <ul id="lang-list">
+            <!-- Dynamically rendered from content.js by script.js (renderLanguages) -->
           </ul>
         </div>
 
@@ -271,15 +267,8 @@
         <h2 data-i18n="certifications.title">Sertifikatlar</h2>
       </div>
 
-      <div class="cert-list reveal">
-        <div class="cert-card">
-          <div class="cert-seal" aria-hidden="true" data-i18n="certifications.items[0].seal">YALE</div>
-          <div>
-            <h3 data-i18n="certifications.items[0].title">Amerika Müqavilə Hüququ I</h3>
-            <span class="issuer" data-i18n="certifications.items[0].issuer">Yale Universiteti — Coursera vasitəsilə — İyun 2026</span>
-            <p data-i18n="certifications.items[0].description">Müqavilələrin bağlanması...</p>
-          </div>
-        </div>
+      <div class="cert-list reveal" id="cert-list">
+        <!-- Dynamically rendered from content.js by script.js (renderCertifications) -->
       </div>
     </div>
   </section>

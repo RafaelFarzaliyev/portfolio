@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Məzmun Paneli — Rəfael Fərzəliyev</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:        #F7F5F1;
+    --paper-raised: #FFFFFF;
+    --ink:          #10141F;
+    --ink-soft:     #4B5468;
+    --line:         #DDD8CE;
+    --line-strong:  #C6C0B2;
+    --signal:       #3B4FE0;
+    --signal-ink:   #2F3FC2;
+    --brass:        #A9825A;
+    --brass-soft:   #E7D9C4;
+    --danger:       #B23B3B;
+    --danger-soft:  #F3E1DE;
+    --ok:           #2E7D4F;
+    --shadow: 0 1px 2px rgba(16,20,31,0.04), 0 8px 24px rgba(16,20,31,0.06);
+    --font-display: 'Source Serif 4', 'Georgia', serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin:0; background: var(--paper); color: var(--ink);
+    font-family: var(--font-body); line-height:1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap{ max-width: 980px; margin: 0 auto; padding: 40px 24px 100px; }
+
+  header.top{
+    border-bottom: 1px solid var(--line-strong);
+    padding-bottom: 22px; margin-bottom: 32px;
+    display:flex; justify-content:space-between; align-items:flex-end; gap:16px; flex-wrap:wrap;
+  }
+  .docket{ font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); margin:0 0 6px; }
+  h1{ font-family: var(--font-display); font-size: 1.9rem; margin:0; font-weight:600; }
+  .top p.sub{ margin: 6px 0 0; color: var(--ink-soft); font-size: 0.95rem; max-width: 46ch; }
+
+  .status-pill{
+    font-family: var(--font-mono); font-size: 0.72rem; letter-spacing:.04em;
+    padding: 5px 10px; border-radius: 100px; border: 1px solid var(--line-strong);
+    background: var(--paper-raised); color: var(--ink-soft); white-space:nowrap;
+  }
+  .status-pill.ok{ border-color: var(--ok); color: var(--ok); }
+  .status-pill.err{ border-color: var(--danger); color: var(--danger); }
+
+  .tabs{ display:flex; gap:8px; margin-bottom: 24px; border-bottom: 1px solid var(--line); }
+  .tab-btn{
+    font-family: var(--font-mono); font-size: 0.82rem; letter-spacing:.03em;
+    background:none; border:none; padding: 10px 4px; margin-right: 22px; cursor:pointer;
+    color: var(--ink-soft); border-bottom: 2px solid transparent; margin-bottom:-1px;
+  }
+  .tab-btn.active{ color: var(--ink); border-bottom-color: var(--signal); }
+  .panel{ display:none; }
+  .panel.active{ display:block; }
+
+  .clause{
+    font-family: var(--font-mono); font-size: 0.72rem; letter-spacing:.05em; text-transform:uppercase;
+    color: var(--brass); display:block; margin-bottom: 6px;
+  }
+
+  .card{
+    background: var(--paper-raised); border: 1px solid var(--line); border-radius: 10px;
+    padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow); position:relative;
+  }
+  .card-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom: 14px; }
+  .card-head .num{ font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink-soft); }
+  .card-actions{ display:flex; gap:6px; }
+  .icon-btn{
+    background: var(--paper); border: 1px solid var(--line-strong); border-radius: 6px;
+    width: 30px; height: 30px; display:flex; align-items:center; justify-content:center;
+    cursor:pointer; color: var(--ink-soft); font-size: 0.9rem; line-height:1;
+  }
+  .icon-btn:hover{ border-color: var(--signal); color: var(--signal); }
+  .icon-btn.danger:hover{ border-color: var(--danger); color: var(--danger); background: var(--danger-soft); }
+  .icon-btn:disabled{ opacity:.35; cursor:not-allowed; }
+
+  .lang-cols{ display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 720px){ .lang-cols{ grid-template-columns: 1fr; } }
+  .col-label{ font-family: var(--font-mono); font-size: 0.7rem; letter-spacing:.06em; text-transform:uppercase; color: var(--ink-soft); margin-bottom:8px; display:block; }
+
+  label.field{ display:block; margin-bottom: 10px; }
+  label.field span{ display:block; font-size: 0.78rem; color: var(--ink-soft); margin-bottom: 4px; }
+  input[type="text"], textarea{
+    width:100%; font-family: var(--font-body); font-size: 0.92rem; color: var(--ink);
+    background: var(--paper); border: 1px solid var(--line-strong); border-radius: 6px;
+    padding: 8px 10px; resize: vertical;
+  }
+  input[type="text"]:focus, textarea:focus{ outline: none; border-color: var(--signal); }
+  textarea{ min-height: 60px; }
+
+  .lang-row{
+    display:grid; grid-template-columns: 1fr 1fr; gap:18px; align-items:end;
+    background: var(--paper-raised); border:1px solid var(--line); border-radius:10px;
+    padding: 16px 20px; margin-bottom:12px; box-shadow: var(--shadow); position:relative;
+  }
+  @media (max-width: 720px){ .lang-row{ grid-template-columns: 1fr; } }
+  .lang-row .card-actions{ position:absolute; top:12px; right:14px; }
+
+  .add-btn{
+    font-family: var(--font-mono); font-size: 0.82rem; letter-spacing:.03em;
+    background: var(--paper-raised); border: 1px dashed var(--line-strong); border-radius: 8px;
+    padding: 12px; width:100%; cursor:pointer; color: var(--ink-soft); margin-top: 4px;
+  }
+  .add-btn:hover{ border-color: var(--signal); color: var(--signal); }
+
+  footer.actions{
+    position: sticky; bottom: 0; margin-top: 36px;
+    background: linear-gradient(180deg, transparent, var(--paper) 30%);
+    padding-top: 30px;
+  }
+  .actions-inner{
+    background: var(--paper-raised); border: 1px solid var(--line-strong); border-radius: 12px;
+    padding: 18px 20px; box-shadow: var(--shadow); display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+  }
+  .btn{
+    font-family: var(--font-mono); font-size: 0.85rem; letter-spacing:.02em;
+    border-radius: 8px; padding: 11px 18px; cursor:pointer; border: 1px solid transparent;
+  }
+  .btn-primary{ background: var(--signal); color: #fff; }
+  .btn-primary:hover{ background: var(--signal-ink); }
+  .btn-ghost{ background: var(--paper); border-color: var(--line-strong); color: var(--ink); }
+  .btn-ghost:hover{ border-color: var(--signal); color: var(--signal); }
+  .actions-note{ font-size: 0.82rem; color: var(--ink-soft); flex: 1 1 260px; }
+
+  .howto{
+    background: var(--paper-raised); border: 1px solid var(--line); border-radius: 10px;
+    padding: 18px 20px; margin-bottom: 28px; font-size: 0.9rem; color: var(--ink-soft);
+  }
+  .howto b{ color: var(--ink); }
+  .howto ol{ margin: 8px 0 0; padding-left: 20px; }
+  .howto li{ margin-bottom: 4px; }
+
+  .empty{ text-align:center; color: var(--ink-soft); padding: 30px 0; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div>
+      <p class="docket">Daxili Alət — Yalnız Redaktor üçün</p>
+      <h1>Məzmun Paneli</h1>
+      <p class="sub">Sertifikatları və dil bacarıqlarını buradan idarə edin, sonra yenilənmiş <code>content.js</code> faylını yükləyib layihəyə qoyun.</p>
+    </div>
+    <span class="status-pill" id="status-pill">Yüklənir…</span>
+  </header>
+
+  <div class="howto">
+    <b>Necə işləyir?</b> Bu səhifə statik saytınızın hissəsidir və birbaşa GitHub-a yazmır (GitHub Pages backend dəstəkləmir).
+    <ol>
+      <li>Aşağıda sertifikat və ya dil əlavə edin / dəyişin / silin — həm Azərbaycan, həm İngilis dilində.</li>
+      <li>Alt hissədəki <b>"content.js faylını yüklə"</b> düyməsini basın.</li>
+      <li>Endirilən <code>content.js</code> faylı ilə layihənizdəki <code>assets/js/content.js</code> faylını əvəz edin və GitHub-a push edin (və ya birbaşa GitHub-un veb redaktorunda faylın məzmununu yeni faylla əvəz edib "Commit" edin).</li>
+    </ol>
+  </div>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="certs">Sertifikatlar</button>
+    <button class="tab-btn" data-tab="langs">Dil Bilikləri</button>
+  </nav>
+
+  <section class="panel active" id="panel-certs">
+    <div id="cert-cards"></div>
+    <button class="add-btn" id="add-cert">+ Yeni sertifikat əlavə et</button>
+  </section>
+
+  <section class="panel" id="panel-langs">
+    <div id="lang-rows"></div>
+    <button class="add-btn" id="add-lang">+ Yeni dil əlavə et</button>
+  </section>
+
+  <footer class="actions">
+    <div class="actions-inner">
+      <span class="actions-note" id="actions-note">Dəyişikliklər yalnız bu səhifədə yaddadır. Faylı yükləyib layihəyə qoymadan onlar saytda görünməyəcək.</span>
+      <button class="btn btn-ghost" id="btn-reset">Sıfırla</button>
+      <button class="btn btn-primary" id="btn-export">content.js faylını yüklə</button>
+    </div>
+  </footer>
+
+</div>
+
+<script src="./assets/js/content.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var pill = document.getElementById("status-pill");
+  var raw = window.SITE_CONTENT;
+
+  if (!raw) {
+    pill.textContent = "content.js tapılmadı";
+    pill.className = "status-pill err";
+  } else {
+    pill.textContent = "content.js yükləndi";
+    pill.className = "status-pill ok";
+  }
+
+  // Work on a deep clone so the original window.SITE_CONTENT stays untouched until export.
+  var state = raw ? JSON.parse(JSON.stringify(raw)) : {
+    az: { certifications: { eyebrow: "Bölmə 05 — Sertifikatlar", title: "Sertifikatlar", items: [] },
+          skills: { languagesTitle: "Dil Bilikləri", languages: [] } },
+    en: { certifications: { eyebrow: "Section 05 — Certifications", title: "Certifications", items: [] },
+          skills: { languagesTitle: "Languages", languages: [] } }
+  };
+
+  function ensurePaths() {
+    ["az", "en"].forEach(function (l) {
+      if (!state[l]) state[l] = {};
+      if (!state[l].certifications) state[l].certifications = { items: [] };
+      if (!state[l].certifications.items) state[l].certifications.items = [];
+      if (!state[l].skills) state[l].skills = { languages: [] };
+      if (!state[l].skills.languages) state[l].skills.languages = [];
+    });
+    // Keep AZ/EN certification & language arrays the same length so entries stay paired by index.
+    var certLen = Math.max(state.az.certifications.items.length, state.en.certifications.items.length);
+    while (state.az.certifications.items.length < certLen) state.az.certifications.items.push({ seal: "", title: "", issuer: "", description: "" });
+    while (state.en.certifications.items.length < certLen) state.en.certifications.items.push({ seal: "", title: "", issuer: "", description: "" });
+
+    var langLen = Math.max(state.az.skills.languages.length, state.en.skills.languages.length);
+    while (state.az.skills.languages.length < langLen) state.az.skills.languages.push({ name: "", level: "" });
+    while (state.en.skills.languages.length < langLen) state.en.skills.languages.push({ name: "", level: "" });
+  }
+  ensurePaths();
+
+  /* ---------------- Tabs ---------------- */
+  document.querySelectorAll(".tab-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.querySelectorAll(".tab-btn").forEach(function (b) { b.classList.remove("active"); });
+      document.querySelectorAll(".panel").forEach(function (p) { p.classList.remove("active"); });
+      btn.classList.add("active");
+      document.getElementById("panel-" + btn.getAttribute("data-tab")).classList.add("active");
+    });
+  });
+
+  /* ---------------- Certifications ---------------- */
+  var certContainer = document.getElementById("cert-cards");
+
+  function renderCerts() {
+    var azItems = state.az.certifications.items;
+    var enItems = state.en.certifications.items;
+    certContainer.innerHTML = "";
+
+    if (!azItems.length) {
+      var empty = document.createElement("p");
+      empty.className = "empty";
+      empty.textContent = "Hələ sertifikat yoxdur. Aşağıdakı düymə ilə əlavə edin.";
+      certContainer.appendChild(empty);
+      return;
+    }
+
+    azItems.forEach(function (azItem, i) {
+      var enItem = enItems[i] || (enItems[i] = { seal: "", title: "", issuer: "", description: "" });
+      var card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML =
+        '<div class="card-head">' +
+          '<span class="num">Sertifikat ' + (i + 1) + '</span>' +
+          '<div class="card-actions">' +
+            '<button class="icon-btn" data-act="up" ' + (i === 0 ? "disabled" : "") + ' title="Yuxarı">↑</button>' +
+            '<button class="icon-btn" data-act="down" ' + (i === azItems.length - 1 ? "disabled" : "") + ' title="Aşağı">↓</button>' +
+            '<button class="icon-btn danger" data-act="del" title="Sil">✕</button>' +
+          '</div>' +
+        '</div>' +
+        '<div class="lang-cols">' +
+          '<div>' +
+            '<span class="col-label">Azərbaycan dili</span>' +
+            '<label class="field"><span>Möhür qısaltması (məs. YALE)</span><input type="text" data-lang="az" data-key="seal" value="' + escAttr(azItem.seal) + '"></label>' +
+            '<label class="field"><span>Sertifikatın adı</span><input type="text" data-lang="az" data-key="title" value="' + escAttr(azItem.title) + '"></label>' +
+            '<label class="field"><span>Təşkilat / tarix</span><input type="text" data-lang="az" data-key="issuer" value="' + escAttr(azItem.issuer) + '"></label>' +
+            '<label class="field"><span>Qısa təsvir</span><textarea data-lang="az" data-key="description">' + escHtml(azItem.description) + '</textarea></label>' +
+          '</div>' +
+          '<div>' +
+            '<span class="col-label">English</span>' +
+            '<label class="field"><span>Seal (e.g. YALE)</span><input type="text" data-lang="en" data-key="seal" value="' + escAttr(enItem.seal) + '"></label>' +
+            '<label class="field"><span>Certificate title</span><input type="text" data-lang="en" data-key="title" value="' + escAttr(enItem.title) + '"></label>' +
+            '<label class="field"><span>Issuer / date</span><input type="text" data-lang="en" data-key="issuer" value="' + escAttr(enItem.issuer) + '"></label>' +
+            '<label class="field"><span>Short description</span><textarea data-lang="en" data-key="description">' + escHtml(enItem.description) + '</textarea></label>' +
+          '</div>' +
+        '</div>';
+
+      card.querySelectorAll("input, textarea").forEach(function (el) {
+        el.addEventListener("input", function () {
+          var lang = el.getAttribute("data-lang");
+          var key = el.getAttribute("data-key");
+          state[lang].certifications.items[i][key] = el.value;
+        });
+      });
+
+      card.querySelector('[data-act="up"]').addEventListener("click", function () {
+        if (i === 0) return;
+        swap(state.az.certifications.items, i, i - 1);
+        swap(state.en.certifications.items, i, i - 1);
+        renderCerts();
+      });
+      card.querySelector('[data-act="down"]').addEventListener("click", function () {
+        if (i === azItems.length - 1) return;
+        swap(state.az.certifications.items, i, i + 1);
+        swap(state.en.certifications.items, i, i + 1);
+        renderCerts();
+      });
+      card.querySelector('[data-act="del"]').addEventListener("click", function () {
+        if (!confirm("Bu sertifikatı silmək istədiyinizə əminsiniz?")) return;
+        state.az.certifications.items.splice(i, 1);
+        state.en.certifications.items.splice(i, 1);
+        renderCerts();
+      });
+
+      certContainer.appendChild(card);
+    });
+  }
+
+  document.getElementById("add-cert").addEventListener("click", function () {
+    state.az.certifications.items.push({ seal: "", title: "", issuer: "", description: "" });
+    state.en.certifications.items.push({ seal: "", title: "", issuer: "", description: "" });
+    renderCerts();
+  });
+
+  /* ---------------- Languages ---------------- */
+  var langContainer = document.getElementById("lang-rows");
+
+  function renderLangs() {
+    var azLangs = state.az.skills.languages;
+    var enLangs = state.en.skills.languages;
+    langContainer.innerHTML = "";
+
+    if (!azLangs.length) {
+      var empty = document.createElement("p");
+      empty.className = "empty";
+      empty.textContent = "Hələ dil əlavə olunmayıb. Aşağıdakı düymə ilə əlavə edin.";
+      langContainer.appendChild(empty);
+      return;
+    }
+
+    azLangs.forEach(function (azLang, i) {
+      var enLang = enLangs[i] || (enLangs[i] = { name: "", level: "" });
+      var row = document.createElement("div");
+      row.className = "lang-row";
+      row.innerHTML =
+        '<div class="card-actions">' +
+          '<button class="icon-btn" data-act="up" ' + (i === 0 ? "disabled" : "") + ' title="Yuxarı">↑</button>' +
+          '<button class="icon-btn" data-act="down" ' + (i === azLangs.length - 1 ? "disabled" : "") + ' title="Aşağı">↓</button>' +
+          '<button class="icon-btn danger" data-act="del" title="Sil">✕</button>' +
+        '</div>' +
+        '<div>' +
+          '<span class="col-label">Azərbaycan dili</span>' +
+          '<label class="field"><span>Dilin adı</span><input type="text" data-lang="az" data-key="name" value="' + escAttr(azLang.name) + '"></label>' +
+          '<label class="field"><span>Səviyyə</span><input type="text" data-lang="az" data-key="level" value="' + escAttr(azLang.level) + '"></label>' +
+        '</div>' +
+        '<div>' +
+          '<span class="col-label">English</span>' +
+          '<label class="field"><span>Language name</span><input type="text" data-lang="en" data-key="name" value="' + escAttr(enLang.name) + '"></label>' +
+          '<label class="field"><span>Level</span><input type="text" data-lang="en" data-key="level" value="' + escAttr(enLang.level) + '"></label>' +
+        '</div>';
+
+      row.querySelectorAll("input").forEach(function (el) {
+        el.addEventListener("input", function () {
+          var lang = el.getAttribute("data-lang");
+          var key = el.getAttribute("data-key");
+          state[lang].skills.languages[i][key] = el.value;
+        });
+      });
+
+      row.querySelector('[data-act="up"]').addEventListener("click", function () {
+        if (i === 0) return;
+        swap(state.az.skills.languages, i, i - 1);
+        swap(state.en.skills.languages, i, i - 1);
+        renderLangs();
+      });
+      row.querySelector('[data-act="down"]').addEventListener("click", function () {
+        if (i === azLangs.length - 1) return;
+        swap(state.az.skills.languages, i, i + 1);
+        swap(state.en.skills.languages, i, i + 1);
+        renderLangs();
+      });
+      row.querySelector('[data-act="del"]').addEventListener("click", function () {
+        if (!confirm("Bu dili silmək istədiyinizə əminsiniz?")) return;
+        state.az.skills.languages.splice(i, 1);
+        state.en.skills.languages.splice(i, 1);
+        renderLangs();
+      });
+
+      langContainer.appendChild(row);
+    });
+  }
+
+  document.getElementById("add-lang").addEventListener("click", function () {
+    state.az.skills.languages.push({ name: "", level: "" });
+    state.en.skills.languages.push({ name: "", level: "" });
+    renderLangs();
+  });
+
+  /* ---------------- Helpers ---------------- */
+  function swap(arr, i, j) { var t = arr[i]; arr[i] = arr[j]; arr[j] = t; }
+  function escAttr(str) { return escHtml(str).replace(/"/g, "&quot;"); }
+  function escHtml(str) {
+    var div = document.createElement("div");
+    div.textContent = str == null ? "" : String(str);
+    return div.innerHTML;
+  }
+
+  /* ---------------- Export / Reset ---------------- */
+  document.getElementById("btn-export").addEventListener("click", function () {
+    var fileText = "window.SITE_CONTENT = " + JSON.stringify(state, null, 2) + ";\n";
+    var blob = new Blob([fileText], { type: "text/javascript" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = "content.js";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    var note = document.getElementById("actions-note");
+    var old = note.textContent;
+    note.textContent = "Yükləndi ✓ — endirilən content.js faylını assets/js/content.js əvəzinə qoyub GitHub-a push edin.";
+    setTimeout(function () { note.textContent = old; }, 6000);
+  });
+
+  document.getElementById("btn-reset").addEventListener("click", function () {
+    if (!confirm("Bütün redaktə olunmamış dəyişikliklər silinəcək. Davam edilsin?")) return;
+    state = raw ? JSON.parse(JSON.stringify(raw)) : state;
+    ensurePaths();
+    renderCerts();
+    renderLangs();
+  });
+
+  renderCerts();
+  renderLangs();
+})();
+</script>
+</body>
+</html>
