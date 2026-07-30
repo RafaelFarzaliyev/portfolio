@@ -178,12 +178,6 @@ window.SITE_CONTENT = {
           "title": "Amerika Müqavilə Hüququ I",
           "issuer": "Yale Universiteti · Coursera · İyun 2026",
           "description": "Amerika Ümumi Hüququnun müqavilə hüququ üzrə əsas prinsiplərini öyrənmişəm."
-        },
-        {
-          "seal": "TEST",
-          "title": "test",
-          "issuer": "1234",
-          "description": "lores"
         }
       ]
     },
@@ -403,12 +397,6 @@ window.SITE_CONTENT = {
           "title": "American Contract Law I",
           "issuer": "Yale University · Coursera · June 2026",
           "description": "Studied core principles of contract law under U.S. common law (offer, acceptance, consideration, and remedies for breach)."
-        },
-        {
-          "seal": "TEST",
-          "title": "TEST",
-          "issuer": "TEST",
-          "description": "TEST"
         }
       ]
     },
