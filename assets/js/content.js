@@ -103,7 +103,7 @@ window.SITE_CONTENT = {
         },
         {
           "period": "2026 — Hazırda",
-          "title": "İnformasiya Hüququ",
+          "title": "İnformasiya Hüququ (Magistr)",
           "org": "Bakı Dövlət Universiteti",
           "bullets": [
             "İnformasiya hüququ sahəsində ixtisaslaşmağı hədəfləyir, hüquq və texnologiyanın kəsişməsində biliklərimi dərinləşdirməyi planlaşdırıram."
@@ -290,7 +290,7 @@ window.SITE_CONTENT = {
       "subtitle": "A summary of my legal internships, volunteer work, and practical courtroom experience.",
       "items": [
         {
-          "period": "July 2026 — Ongoing",
+          "period": "July 2026 — Present",
           "title": "Legal Intern",
           "org": "Azerbaijan Railways (ADY) CJSC",
           "bullets": [
@@ -332,8 +332,8 @@ window.SITE_CONTENT = {
           ]
         },
         {
-          "period": "2026 — Ongoing",
-          "title": "İnformation Law",
+          "period": "2026 — Present",
+          "title": "LL.M. (İnformation Law)",
           "org": "Baku State University",
           "bullets": [
             "Aiming to specialize in Information Law while deepening my expertise at the intersection of law and technology."
