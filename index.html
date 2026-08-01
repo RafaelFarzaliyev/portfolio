@@ -113,23 +113,8 @@
           <p data-i18n="about.p2">Praktiki təcrübəmə "Azərbaycan Dəmir Yolları" QSC-də hüquq təcrübəçisi kimi korporativ müqavilələrin hazırlanması, Bakı Ağır Cinayətlər Məhkəməsində hakimlərin yanında könüllü müşahidəçi kimi iştirak, həmçinin "Femida" Vəkillik Modulunda simulyasiya edilmiş məhkəmə işləri üzərində vəkillik və sənədləşmə bacarıqlarımın inkişafı daxildir.</p>
           <p data-i18n="about.p3">Formal hüquqi işdən əlavə, "Saniyəlik Hüquq" layihəsinin təsisçisiyəm — mürəkkəb Azərbaycan qanunvericiliyini vizual məzmuna çevirən ictimai maarifləndirmə təşəbbüsü, hazırda 780+ izləyici və 40,000+ ümumi baxışa malikdir. Hüquqi bilikləri texnologiya ilə birləşdirərək dəqiq və əlçatan həllər təqdim etməyə çalışıram.</p>
         </div>
-        <div class="reveal">
-          <div class="stat-card">
-            <span class="label" data-i18n="about.stats[0].label">Təhsil</span>
-            <span class="value" data-i18n="about.stats[0].value">Hüquqşünaslıq (Bakalavr), BDU</span>
-          </div>
-          <div class="stat-card">
-            <span class="label" data-i18n="about.stats[1].label">İstiqamət</span>
-            <span class="value" data-i18n="about.stats[1].value">Müqavilə Hüququ və Legal Tech</span>
-          </div>
-          <div class="stat-card">
-            <span class="label" data-i18n="about.stats[2].label">Dillər</span>
-            <span class="value" data-i18n="about.stats[2].value">Azərbaycan · İngilis · Türk · İspan</span>
-          </div>
-          <div class="stat-card">
-            <span class="label" data-i18n="about.stats[3].label">Yer</span>
-            <span class="value" data-i18n="about.stats[3].value">Bakı, Azərbaycan</span>
-          </div>
+        <div class="reveal" id="about-stats">
+          <!-- Dynamically rendered from content.js by script.js (renderAboutStats) -->
         </div>
       </div>
     </div>
@@ -144,37 +129,8 @@
         <p data-i18n="experience.subtitle">Hüquqi təcrübələrimin, könüllülük fəaliyyətimin və məhkəmə prosesləri ilə tanışlığımın qısa xülasəsi.</p>
       </div>
 
-      <div class="timeline reveal">
-        <div class="timeline-item">
-          <span class="period" data-i18n="experience.items[0].period">İyul 2026 — Hal-hazırda</span>
-          <h3 data-i18n="experience.items[0].title">Təcrübəçi (Hüquq)</h3>
-          <span class="org" data-i18n="experience.items[0].org">"Azərbaycan Dəmir Yolları" QSC</span>
-          <ul>
-            <li data-i18n="experience.items[0].bullets[0]">Korporativ müqavilələrin...</li>
-            <li data-i18n="experience.items[0].bullets[1]">Normativ uyğunluğu...</li>
-            <li data-i18n="experience.items[0].bullets[2]">Korporativ idarəetməyə...</li>
-          </ul>
-        </div>
-
-        <div class="timeline-item">
-          <span class="period" data-i18n="experience.items[1].period">Oktyabr 2024 — Mart 2025</span>
-          <h3 data-i18n="experience.items[1].title">Könüllü</h3>
-          <span class="org" data-i18n="experience.items[1].org">"Femida" Vəkillik Modulu</span>
-          <ul>
-            <li data-i18n="experience.items[1].bullets[0]">Vəkillik bacarıqları...</li>
-            <li data-i18n="experience.items[1].bullets[1]">Real məhkəmə proseslərində...</li>
-          </ul>
-        </div>
-
-        <div class="timeline-item">
-          <span class="period" data-i18n="experience.items[2].period">Avqust 2024 — Sentyabr 2024</span>
-          <h3 data-i18n="experience.items[2].title">Könüllü</h3>
-          <span class="org" data-i18n="experience.items[2].org">Bakı Ağır Cinayətlər Məhkəməsi</span>
-          <ul>
-            <li data-i18n="experience.items[2].bullets[0]">Mürəkkəb cinayət mühakiməsi...</li>
-            <li data-i18n="experience.items[2].bullets[1]">Məhkəmə sənədlərinin hazırlanmasına...</li>
-          </ul>
-        </div>
+      <div class="timeline reveal" id="experience-timeline">
+        <!-- Dynamically rendered from content.js by script.js (renderTimeline) -->
       </div>
     </div>
   </section>
@@ -186,26 +142,8 @@
         <span class="clause" data-i18n="education.eyebrow">Maddə 03 — Baza</span>
         <h2 data-i18n="education.title">Təhsil</h2>
       </div>
-      <div class="timeline reveal">
-        <div class="timeline-item">
-          <span class="period" data-i18n="education.items[0].period">2022 — 2026</span>
-          <h3 data-i18n="education.items[0].title">Hüquqşünaslıq (Bakalavr)</h3>
-          <span class="org" data-i18n="education.items[0].org">Bakı Dövlət Universiteti</span>
-          <ul>
-            <li data-i18n="education.items[0].bullets[0]">Mülki, cinayət və prosessual hüququn əsaslarını əhatə edən dörd illik Bakalavr proqramı.</li>
-          </ul>
-        </div>
-
-        <!-- FIX: this block was missing, so education.items[1] (the master's / ongoing degree) never rendered -->
-        <div class="timeline-item">
-          <span class="period" data-i18n="education.items[1].period">2026 — Hazırda</span>
-          <h3 data-i18n="education.items[1].title">İnformasiya Hüququ</h3>
-          <span class="org" data-i18n="education.items[1].org">Bakı Dövlət Universiteti</span>
-          <ul>
-            <li data-i18n="education.items[1].bullets[0]">İxtisaslaşma: İnformasiya Hüququ və Rəqəmsal Hüquqlar.</li>
-            <li data-i18n="education.items[1].bullets[1]">Tədqiqat: Hüquqi rəqəmsallaşdırma və məlumatların qorunması.</li>
-          </ul>
-        </div>
+      <div class="timeline reveal" id="education-timeline">
+        <!-- Dynamically rendered from content.js by script.js (renderTimeline) -->
       </div>
     </div>
   </section>
@@ -218,41 +156,15 @@
         <h2 data-i18n="skills.title">Bacarıqlar</h2>
       </div>
 
-      <div class="skills-grid">
-        <div class="skill-card reveal">
-          <h3 data-i18n="skills.categories[0].title">Hüquqi Bacarıqlar</h3>
-          <ul>
-            <li data-i18n="skills.categories[0].items[0]">Hüquqi Araşdırma və Sənədləşmə</li>
-            <li data-i18n="skills.categories[0].items[1]">Müqavilə Hüququ</li>
-            <li data-i18n="skills.categories[0].items[2]">Hüquqi Yazı</li>
-          </ul>
-        </div>
-
-        <div class="skill-card reveal">
-          <h3 data-i18n="skills.categories[1].title">Legal Tech və Proqramlar</h3>
-          <ul>
-            <li data-i18n="skills.categories[1].items[0]">Legal Tech (Hüquqi Texnologiyalar)</li>
-            <li data-i18n="skills.categories[1].items[1]">AI (Süni İntellekt) Alətləri</li>
-            <li data-i18n="skills.categories[1].items[2]">MS Office Paketi</li>
-            <li data-i18n="skills.categories[1].items[3]">Data Analizi</li>
-            <li data-i18n="skills.categories[1].items[4]">Python</li>
-          </ul>
+      <div class="skills-grid reveal">
+        <div id="skills-categories" style="display:contents">
+          <!-- Dynamically rendered from content.js by script.js (renderSkillCategories) -->
         </div>
 
         <div class="skill-card reveal">
           <h3 data-i18n="skills.languagesTitle">Dillər</h3>
           <ul id="lang-list">
             <!-- Dynamically rendered from content.js by script.js (renderLanguages) -->
-          </ul>
-        </div>
-
-        <div class="skill-card reveal">
-          <h3 data-i18n="skills.categories[2].title">Peşəkar Bacarıqlar</h3>
-          <ul>
-            <li data-i18n="skills.categories[2].items[0]">Analitik Düşüncə</li>
-            <li data-i18n="skills.categories[2].items[1]">İctimai Çıxış</li>
-            <li data-i18n="skills.categories[2].items[2]">Komanda İşi</li>
-            <li data-i18n="skills.categories[2].items[3]">Problem Həll Etmə</li>
           </ul>
         </div>
       </div>
@@ -281,21 +193,8 @@
         <h2 data-i18n="projects.title">Layihələr</h2>
       </div>
 
-      <div class="project-card reveal">
-        <span class="clause" data-i18n="projects.tagline">Təsisçi və Kontent Yaradıcısı</span>
-        <h3 data-i18n="projects.itemTitle">"Saniyəlik Hüquq"</h3>
-        <p data-i18n="projects.description">Mürəkkəb Azərbaycan qanunvericiliyini "Hüquqi Dizayn" prinsipləri əsasında vizual məzmuna çevirdiyim ictimai hüquqi maarifləndirmə layihəm.</p>
-        <div class="project-tags">
-          <span data-i18n="projects.tags[0]">Hüquqi Dizayn</span>
-          <span data-i18n="projects.tags[1]">Mülki Hüquq</span>
-          <span data-i18n="projects.tags[2]">Əmək Hüququ</span>
-          <span data-i18n="projects.tags[3]">Ailə Hüququ</span>
-        </div>
-        <ul>
-          <li data-i18n="projects.bullets[0]">Mülki, Əmək və Ailə hüququ üzrə mürəkkəb anlayışları infoqrafikalara çevirərək 780+ izləyicidən ibarət orqanik auditoriya formalaşdırdım.</li>
-          <li data-i18n="projects.bullets[1]">Məzmun istehsalının tam dövrünü — araşdırma, dizayn, redaktə — idarə edərək 40,000+ ümumi baxış əldə etdim (ən yüksək nəticə: 6,100+).</li>
-          <li data-i18n="projects.bullets[2]">Layihənin təsisçisi və rəhbəri kimi bütün strateji və yaradıcı qərarları həyata keçirdim.</li>
-        </ul>
+      <div class="project-list reveal" id="project-list">
+        <!-- Dynamically rendered from content.js by script.js (renderProjects) -->
       </div>
     </div>
   </section>
@@ -309,19 +208,8 @@
           <h2 data-i18n="contact.title">Əlaqə</h2>
           <p data-i18n="contact.description">Bakıda və digər yerlərdə hüquq...</p>
         </div>
-        <div class="contact-list">
-          <a href="mailto:rafaelfarzaliyev@outlook.com">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-            <span><span class="clabel" data-i18n="contact.email.label">E-poçt</span><span data-i18n="contact.email.value">rafaelfarzaliyev@outlook.com</span></span>
-          </a>
-          <a href="tel:+994552921818">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7.9 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>
-            <span><span class="clabel" data-i18n="contact.phone.label">Telefon</span><span data-i18n="contact.phone.value">+994 55 292 18 18</span></span>
-          </a>
-          <a href="https://www.linkedin.com/in/rafaelfarzaliyev/" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z" opacity="0"/><path d="M6.5 8.5v9M6.5 5.5v.01M11 17.5v-5c0-1.7 1-3 3-3s3 1.3 3 3v5M11 12.5v5"/></svg>
-            <span><span class="clabel" data-i18n="contact.linkedin.label">LinkedIn</span><span data-i18n="contact.linkedin.value">linkedin.com/in/rafaelfarzaliyev</span></span>
-          </a>
+        <div class="contact-list" id="contact-methods">
+          <!-- Dynamically rendered from content.js by script.js (renderContactMethods) -->
         </div>
       </div>
     </div>

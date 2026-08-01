@@ -626,6 +626,7 @@ section[id]{ scroll-margin-top: 88px; }
    Certifications
    --------------------------------------------------------------------- */
 .cert-list{ display: grid; gap: 18px; }
+.project-list{ display: grid; gap: 18px; }
 .cert-card{
   display: grid;
   grid-template-columns: auto 1fr;
