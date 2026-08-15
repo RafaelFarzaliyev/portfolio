@@ -171,12 +171,15 @@ window.SITE_CONTENT = {
     "certifications": {
       "eyebrow": "Bölmə 05 — Sertifikatlar",
       "title": "Sertifikatlar",
+      "open": "Sertifikatı gör",
       "items": [
         {
           "seal": "YALE",
           "title": "Amerika Müqavilə Hüququ I",
           "issuer": "Yale Universiteti · Coursera · İyun 2026",
-          "description": "Amerika Ümumi Hüququnun müqavilə hüququ üzrə əsas prinsiplərini öyrənmişəm."
+          "description": "Amerika Ümumi Hüququnun müqavilə hüququ üzrə əsas prinsiplərini öyrənmişəm.",
+          "link": "",
+          "file": ""
         }
       ]
     },
@@ -401,12 +404,15 @@ window.SITE_CONTENT = {
     "certifications": {
       "eyebrow": "Section 05 — Certifications",
       "title": "Certifications",
+      "open": "View certificate",
       "items": [
         {
           "seal": "YALE",
           "title": "American Contract Law I",
           "issuer": "Yale University · Coursera · June 2026",
-          "description": "Studied core principles of contract law under U.S. common law (offer, acceptance, consideration, and remedies for breach)."
+          "description": "Studied core principles of contract law under U.S. common law (offer, acceptance, consideration, and remedies for breach).",
+          "link": "",
+          "file": ""
         }
       ]
     },

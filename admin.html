@@ -196,12 +196,26 @@
       key: "certifications", tab: "Sertifikatlar",
       path: ["certifications", "items"],
       itemNoun: { az: "Sertifikat", en: "Certificate" },
-      emptyItem: function () { return { seal: "", title: "", issuer: "", description: "" }; },
+      emptyItem: function () { return { seal: "", title: "", issuer: "", description: "", link: "", file: "" }; },
       fields: [
         { key: "seal", type: "text", label: { az: "Möhür qısaltması (məs. YALE)", en: "Seal (e.g. YALE)" } },
         { key: "title", type: "text", label: { az: "Sertifikatın adı", en: "Certificate title" } },
         { key: "issuer", type: "text", label: { az: "Təşkilat / tarix", en: "Issuer / date" } },
-        { key: "description", type: "textarea", label: { az: "Qısa təsvir", en: "Short description" } }
+        { key: "description", type: "textarea", label: { az: "Qısa təsvir", en: "Short description" } },
+        {
+          key: "link", type: "text", shared: true,
+          label: {
+            az: "Sertifikatın veb linki (varsa) — məs. Coursera təsdiq linki. Doldurulsa, klikləndikdə bura yönləndirir.",
+            en: "Certificate web link (if any) — e.g. a Coursera verification page. If set, clicking opens this."
+          }
+        },
+        {
+          key: "file", type: "text", shared: true,
+          label: {
+            az: "Sertifikat sənədinin fayl adı (assets/certificates/ qovluğuna yüklədiyiniz fayl, məs: yale-sertifikat.pdf). Link boşdursa, klikləndikdə bu fayl yeni tab-da açılır.",
+            en: "Certificate file name (upload it into assets/certificates/, e.g. yale-certificate.pdf). If Link is empty, clicking opens this file in a new tab."
+          }
+        }
       ]
     },
     {

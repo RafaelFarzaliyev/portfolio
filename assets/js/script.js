@@ -139,18 +139,36 @@
     });
   }
 
+  // A certificate opens two possible ways, in priority order:
+  //   1. item.link  — an external URL (e.g. a Coursera verification page): the card
+  //      becomes a normal link to that page.
+  //   2. item.file  — a filename the user has uploaded into assets/certificates/:
+  //      the card opens that document/image directly in a new tab.
+  // If neither is set, the card stays a plain non-interactive <div>, unchanged.
+  var CERT_OPEN_ICON =
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ' +
+    'stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>';
+
   function renderCertifications(content) {
     var items = content.certifications && content.certifications.items;
     renderInto("cert-list", items, function (item) {
+      var href = item.link ? item.link : (item.file ? "assets/certificates/" + item.file : "");
+      var tag = href ? "a" : "div";
+      var openAttrs = href ? ' href="' + escapeHtml(href) + '" target="_blank" rel="noopener noreferrer"' : "";
+      var openLabel = (content.certifications && content.certifications.open) || "";
+      var openHint = href
+        ? '<span class="cert-open">' + CERT_OPEN_ICON + '<span>' + escapeHtml(openLabel) + '</span></span>'
+        : "";
       return (
-        '<div class="cert-card">' +
+        "<" + tag + ' class="cert-card"' + openAttrs + ">" +
           '<div class="cert-seal" aria-hidden="true">' + escapeHtml(item.seal) + '</div>' +
           '<div>' +
             '<h3>' + escapeHtml(item.title) + '</h3>' +
             '<span class="issuer">' + escapeHtml(item.issuer) + '</span>' +
             '<p>' + escapeHtml(item.description) + '</p>' +
+            openHint +
           '</div>' +
-        '</div>'
+        "</" + tag + ">"
       );
     });
   }
