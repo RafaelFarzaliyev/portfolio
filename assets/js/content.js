@@ -178,7 +178,15 @@ window.SITE_CONTENT = {
           "title": "Amerika Müqavilə Hüququ I",
           "issuer": "Yale Universiteti · Coursera · İyun 2026",
           "description": "Amerika Ümumi Hüququnun müqavilə hüququ üzrə əsas prinsiplərini öyrənmişəm.",
-          "link": "",
+          "link": "https://www.coursera.org/account/accomplishments/verify/CRNME1E4ZMTM",
+          "file": ""
+        },
+        {
+          "seal": "EF SET",
+          "title": "EF SET İngilis dili sertifikatı",
+          "issuer": "EF SET · 27 iyun 2026",
+          "description": "İngilis dili üzrə EF SET imtahanından 70/100 nəticə əldə edərək C1 (Advanced) səviyyəsi müəyyən edilmişdir.",
+          "link": "https://cert.efset.org/JV3Aq8",
           "file": ""
         }
       ]
@@ -411,7 +419,15 @@ window.SITE_CONTENT = {
           "title": "American Contract Law I",
           "issuer": "Yale University · Coursera · June 2026",
           "description": "Studied core principles of contract law under U.S. common law (offer, acceptance, consideration, and remedies for breach).",
-          "link": "",
+          "link": "https://www.coursera.org/account/accomplishments/verify/CRNME1E4ZMTM",
+          "file": ""
+        },
+        {
+          "seal": "EF SET",
+          "title": "EF SET English Certificate",
+          "issuer": "EF SET · June 27, 2026",
+          "description": "Achieved a score of 70/100 on the EF SET English test, corresponding to the C1 (Advanced) level.",
+          "link": "https://cert.efset.org/JV3Aq8",
           "file": ""
         }
       ]
