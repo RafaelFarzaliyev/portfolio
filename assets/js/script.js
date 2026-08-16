@@ -13,6 +13,17 @@
   var THEME_KEY = "rf-portfolio-theme";
   var LANG_KEY = "rf-portfolio-lang";
 
+  /* ---------------- Portrait fallback ----------------
+     Was an inline onerror="" attribute; moved into JS so the page can run under a strict
+     script-src CSP with no 'unsafe-inline'. Behaviour is unchanged: if the portrait image
+     fails to load, hide it and let the "Şəkil üçün yer" placeholder underneath show through. */
+  var portraitImg = document.getElementById("portrait-img");
+  if (portraitImg) {
+    portraitImg.addEventListener("error", function () {
+      portraitImg.style.display = "none";
+    });
+  }
+
   /* ---------------- Small path-lookup helper for content.js ----------------
      Resolves strings like "experience.items[0].bullets[1]" against an object. */
   function resolvePath(obj, path) {
@@ -63,16 +74,6 @@
   var ogTitle = document.getElementById("og-title");
   var ogDescription = document.getElementById("og-description");
 
-  /* ---------------- Dynamic list rendering (certifications & languages) ----------------
-     These two sections come from arrays in content.js whose length can change (e.g. a new
-     certificate or a new language added via the admin tool), so they're built with DOM APIs
-     instead of fixed data-i18n indices, then re-built whenever the language is switched. */
-  function escapeHtml(str) {
-    var div = document.createElement("div");
-    div.textContent = str == null ? "" : String(str);
-    return div.innerHTML;
-  }
-
   /* ---------------- Dynamic list rendering ----------------
      Every section below is backed by an array in content.js whose length can change
      (a new job, a new certificate, a new project, a new contact method...), so each is
@@ -86,6 +87,31 @@
     var div = document.createElement("div");
     div.textContent = str == null ? "" : String(str);
     return div.innerHTML;
+  }
+
+  /* escapeHtml() only neutralises &, <, > — safe for text NODES but NOT for values placed
+     inside a double-quoted HTML attribute (e.g. href="..."), since a raw " in the source
+     string would close the attribute early and let the rest of the string be parsed as new
+     attributes/markup (classic attribute-breakout XSS). Every href/src/etc. built from
+     content.js data below MUST use this instead of escapeHtml(). */
+  function escapeAttr(str) {
+    return escapeHtml(str).replace(/"/g, "&quot;");
+  }
+
+  /* Escaping quotes stops attribute-breakout, but a value like "javascript:alert(1)" is
+     still a syntactically valid href that the browser will happily execute on click — no
+     amount of HTML-escaping prevents that, because the danger is the URL *scheme*, not
+     stray markup. Only allow schemes that can't run code (http/https/mailto/tel) or
+     schemeless relative/anchor paths; anything else (javascript:, data:, vbscript:, blob:…)
+     is rejected. Browsers strip tab/newline/CR from anywhere in a URL before reading its
+     scheme (a classic filter-bypass trick, e.g. "java\tscript:alert(1)"), so this strips
+     them first too. */
+  function isSafeUrl(url) {
+    if (!url) return false;
+    var cleaned = String(url).replace(/[\t\n\r]/g, "").trim();
+    if (!cleaned) return false;
+    if (!/^[a-z][a-z0-9+.-]*:/i.test(cleaned)) return true; // no scheme -> relative/anchor path
+    return /^(https?:|mailto:|tel:)/i.test(cleaned);
   }
 
   function renderInto(containerId, items, templateFn) {
@@ -152,9 +178,10 @@
   function renderCertifications(content) {
     var items = content.certifications && content.certifications.items;
     renderInto("cert-list", items, function (item) {
-      var href = item.link ? item.link : (item.file ? "assets/certificates/" + item.file : "");
+      var rawHref = item.link ? item.link : (item.file ? "assets/certificates/" + item.file : "");
+      var href = isSafeUrl(rawHref) ? rawHref : "";
       var tag = href ? "a" : "div";
-      var openAttrs = href ? ' href="' + escapeHtml(href) + '" target="_blank" rel="noopener noreferrer"' : "";
+      var openAttrs = href ? ' href="' + escapeAttr(href) + '" target="_blank" rel="noopener noreferrer"' : "";
       var openLabel = (content.certifications && content.certifications.open) || "";
       var openHint = href
         ? '<span class="cert-open">' + CERT_OPEN_ICON + '<span>' + escapeHtml(openLabel) + '</span></span>'
@@ -226,10 +253,11 @@
     var methods = content.contact && content.contact.methods;
     renderInto("contact-methods", methods, function (m) {
       var glyph = CONTACT_ICONS[m.icon] || CONTACT_ICONS["default"];
-      var external = /^https?:\/\//i.test(m.href || "");
+      var href = isSafeUrl(m.href) ? m.href : "#";
+      var external = /^https?:\/\//i.test(href);
       var target = external ? ' target="_blank" rel="noopener noreferrer"' : "";
       return (
-        '<a href="' + escapeHtml(m.href) + '"' + target + '>' +
+        '<a href="' + escapeAttr(href) + '"' + target + '>' +
           '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">' + glyph + '</svg>' +
           '<span><span class="clabel">' + escapeHtml(m.label) + '</span><span>' + escapeHtml(m.value) + '</span></span>' +
         '</a>'

@@ -3,6 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Security hardening: this page has no inline <script>/<style> and makes no fetch/XHR
+     calls, so script-src and connect-src can be locked to 'self' with no 'unsafe-inline'.
+     style-src/font-src only need to allow Google Fonts, the page's one external dependency.
+     Note: frame-ancestors (clickjacking protection) is intentionally NOT listed here — the
+     CSP spec ignores that directive when delivered via <meta>; it only takes effect as a
+     real HTTP response header, which needs to be set at the hosting/CDN level. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Rəfael Fərzəliyev — Hüquq Məzunu və Legal Tech</title>
 <meta name="description" content="Rəfael Fərzəliyev — Bakı Dövlət Universitetinin hüquq məzunu, korporativ hüquq və Legal Tech sahəsində təcrübəyə malikdir." id="meta-description">
 <meta name="author" content="Rəfael Fərzəliyev">
@@ -93,7 +101,7 @@
             <strong data-i18n="hero.portraitTitle">Şəkil üçün yer</strong>
             <span data-i18n="hero.portraitBody">Şəkil görsənmirsə səhifəni yeniləməyi yoxlayın.</span>
           </div>
-          <img class="portrait-img" src="./assets/images/portrait.jpg" alt="Rəfael Fərzəliyev" onerror="this.style.display='none';">
+          <img class="portrait-img" id="portrait-img" src="./assets/images/portrait.jpg" alt="Rəfael Fərzəliyev">
         </div>
         <div class="seal-ring" aria-hidden="true"></div>
       </div>
@@ -157,7 +165,7 @@
       </div>
 
       <div class="skills-grid reveal">
-        <div id="skills-categories" style="display:contents">
+        <div id="skills-categories">
           <!-- Dynamically rendered from content.js by script.js (renderSkillCategories) -->
         </div>
 

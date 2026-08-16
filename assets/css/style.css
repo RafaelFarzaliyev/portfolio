@@ -579,6 +579,11 @@ section[id]{ scroll-margin-top: 88px; }
   grid-template-columns: 1fr;
   gap: 22px;
 }
+/* Lets the dynamically-rendered skill-category cards (script.js renderSkillCategories)
+   participate directly in the parent grid, as if this wrapper weren't there. Kept in CSS
+   rather than an inline style="" attribute so the site can run under a strict style-src
+   CSP with no 'unsafe-inline'. */
+#skills-categories{ display: contents; }
 @media (min-width: 700px){
   .skills-grid{ grid-template-columns: repeat(2, 1fr); }
 }
