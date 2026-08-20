@@ -27,7 +27,7 @@ window.SITE_CONTENT = {
       "ctaExperience": "Təcrübəyə bax",
       "ctaDownload": "CV-ni yüklə",
       "portraitTitle": "Profil şəkli",
-      "portraitBody": "assets/images/portrait.jpg faylını əlavə edin — şəkil avtomatik olaraq burada görünəcək."
+      "portraitBody": "Şəkil yüklənmədikdə, səhifəni yeniləyin."
     },
     "about": {
       "eyebrow": "Bölmə 01 — Haqqımda",
