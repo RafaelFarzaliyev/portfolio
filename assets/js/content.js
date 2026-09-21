@@ -60,7 +60,7 @@ window.SITE_CONTENT = {
       "subtitle": "Hüquqi təcrübəm, könüllülük fəaliyyətim və məhkəmə sistemi ilə bağlı qazandığım praktiki biliklərin qısa xülasəsi.",
       "items": [
         {
-          "period": "İyul 2026 — Hazırda",
+          "period": "İyul 2026 — Sentyabr 2024",
           "title": "Hüquq Təcrübəçisi",
           "org": "\"Azərbaycan Dəmir Yolları\" QSC",
           "bullets": [
@@ -301,7 +301,7 @@ window.SITE_CONTENT = {
       "subtitle": "A summary of my legal internships, volunteer work, and practical courtroom experience.",
       "items": [
         {
-          "period": "July 2026 — Present",
+          "period": "July 2026 — September 2026",
           "title": "Legal Intern",
           "org": "Azerbaijan Railways (ADY) CJSC",
           "bullets": [
