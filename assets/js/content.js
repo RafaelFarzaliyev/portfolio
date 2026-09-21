@@ -64,9 +64,10 @@ window.SITE_CONTENT = {
           "title": "Hüquq Təcrübəçisi",
           "org": "\"Azərbaycan Dəmir Yolları\" QSC",
           "bullets": [
-            "Korporativ müqavilələrin və rəsmi yazışmaların hazırlanması və hüquqi ekspertizasını həyata keçirmişəm.",
-            "Qanunvericiliyin tələblərinə uyğunluğu təmin etmək məqsədilə hüquqi araşdırmalar aparmışam.",
-            "Gündəlik korporativ hüquqi və idarəetmə fəaliyyətlərinə dəstək göstərmişəm."
+            "20+ müqavilənin (beynəlxalq NDA daxil) tərtibi, baxışı və danışıqlar dəstəyi",
+            "Məhkəmə mübahisələrində pretenziya, iddia ərizəsi və etiraz sənədlərinin hazırlanması",
+            "Əmək hüququ üzrə Gürcüstan və Azərbaycan qanunvericiliyinin müqayisəli təhlili",
+            "Hüquq departamenti üçün icazələr matrisinin konsepsiyası üzrə məsləhətləşmə və korporativ protokolların hazırlanması"
           ]
         },
         {
@@ -305,9 +306,10 @@ window.SITE_CONTENT = {
           "title": "Legal Intern",
           "org": "Azerbaijan Railways (ADY) CJSC",
           "bullets": [
-            "Drafted and reviewed corporate contracts and official correspondence.",
-            "Conducted legal research to ensure compliance with applicable legislation.",
-            "Supported daily corporate legal and governance activities."
+            "Drafted, reviewed and supported negotiations on 20+ supply and service agreements, including an international NDA",
+            "Prepared demand letters, statements of claim, and objections in court disputes over unfulfilled contractual obligations",
+            "Conducted comparative legal analysis of Georgian and Azerbaijani labor legislation",
+            "Advised on the concept of an authorization matrix for the Legal Department and contributed to drafting corporate protocols"
           ]
         },
         {
