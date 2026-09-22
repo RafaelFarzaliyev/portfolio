@@ -196,8 +196,8 @@ window.SITE_CONTENT = {
           "title": "Hüquq departamentində Yay təcrübə proqramı",
           "issuer": "Azərbaycan Dəmir Yolları · 11 sentyabr 2026",
           "description": "Azərbaycan Dəmir Yollarının Hüquq departamentində Yay təcrübə proqramı çərçivəsində uğurlu fəaliyyətə görə sertifikatla təltif edilmişəm.",
-          "link": "ADY sertifikat.pdf",
-          "file": "ADY sertifikat.pdf"
+          "link": "ADY_sertifikat.pdf",
+          "file": "ADY_sertifikat.pdf"
         }
       ]
     },
@@ -447,8 +447,8 @@ window.SITE_CONTENT = {
           "title": "Summer Internship Program in the Legal Department",
           "issuer": "Azerbaijan Railways · September 11, 2026",
           "description": "Awarded for successful activity within the Summer Internship Program in the Legal Department of Azerbaijan Railways.",
-          "link": "ADY sertifikat.pdf",
-          "file": "ADY sertifikat.pdf"
+          "link": "ADY_sertifikat.pdf",
+          "file": "ADY_sertifikat.pdf"
         }
       ]
     },
