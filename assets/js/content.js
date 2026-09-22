@@ -190,6 +190,14 @@ window.SITE_CONTENT = {
           "description": "İngilis dili üzrə EF SET imtahanından 70/100 nəticə əldə edərək C1 (Advanced) səviyyəsi müəyyən edilmişdir.",
           "link": "https://cert.efset.org/JV3Aq8",
           "file": ""
+        },
+        {
+          "seal": "ADY",
+          "title": "Hüquq departamentində Yay təcrübə proqramı",
+          "issuer": "Azərbaycan Dəmir Yolları · 11 sentyabr 2026",
+          "description": "Azərbaycan Dəmir Yollarının Hüquq departamentində Yay təcrübə proqramı çərçivəsində uğurlu fəaliyyətə görə sertifikatla təltif edilmişəm.",
+          "link": "ADY sertifikat.pdf",
+          "file": "ADY sertifikat.pdf"
         }
       ]
     },
@@ -433,6 +441,14 @@ window.SITE_CONTENT = {
           "description": "Achieved a score of 70/100 on the EF SET English test, corresponding to the C1 (Advanced) level.",
           "link": "https://cert.efset.org/JV3Aq8",
           "file": ""
+        },
+        {
+          "seal": "ADY",
+          "title": "Summer Internship Program in the Legal Department",
+          "issuer": "Azerbaijan Railways · September 11, 2026",
+          "description": "Awarded for successful activity within the Summer Internship Program in the Legal Department of Azerbaijan Railways.",
+          "link": "ADY sertifikat.pdf",
+          "file": "ADY sertifikat.pdf"
         }
       ]
     },
