@@ -70,6 +70,7 @@
   var langButtons = document.querySelectorAll(".lang-btn");
   var i18nEls = document.querySelectorAll("[data-i18n]");
   var i18nAriaEls = document.querySelectorAll("[data-i18n-aria]");
+  var i18nHrefEls = document.querySelectorAll("[data-i18n-href]");
   var metaDescription = document.getElementById("meta-description");
   var ogTitle = document.getElementById("og-title");
   var ogDescription = document.getElementById("og-description");
@@ -288,6 +289,12 @@
       var key = el.getAttribute("data-i18n-aria");
       var value = resolvePath(content, key);
       if (typeof value === "string") el.setAttribute("aria-label", value);
+    });
+
+    i18nHrefEls.forEach(function (el) {
+      var key = el.getAttribute("data-i18n-href");
+      var value = resolvePath(content, key);
+      if (typeof value === "string") el.setAttribute("href", value);
     });
 
     document.documentElement.setAttribute("lang", lang);

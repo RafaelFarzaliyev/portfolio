@@ -26,6 +26,7 @@ window.SITE_CONTENT = {
       "ctaContact": "Əlaqə saxla",
       "ctaExperience": "Təcrübəyə bax",
       "ctaDownload": "CV-ni yüklə",
+      "cvFile": "./assets/files/Rafael_Farzaliyev_CV.pdf",
       "portraitTitle": "Profil şəkli",
       "portraitBody": "Şəkil yüklənmədikdə, səhifəni yeniləyin."
     },
@@ -268,6 +269,7 @@ window.SITE_CONTENT = {
       "ctaContact": "Contact Me",
       "ctaExperience": "View Experience",
       "ctaDownload": "Download CV",
+      "cvFile": "./assets/files/Rafael_Farzaliyev_CV_EN.pdf",
       "portraitTitle": "Portrait",
       "portraitBody": "Add assets/images/portrait.jpg and your profile photo will appear here automatically."
     },
