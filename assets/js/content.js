@@ -166,7 +166,7 @@ window.SITE_CONTENT = {
         },
         {
           "name": "Rus dili",
-          "level": "A1"
+          "level": "A2"
         }
       ]
     },
@@ -417,7 +417,7 @@ window.SITE_CONTENT = {
         },
         {
           "name": "Russian",
-          "level": "A1"
+          "level": "A2"
         }
       ]
     },
