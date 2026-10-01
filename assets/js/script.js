@@ -222,14 +222,25 @@
       var bullets = (proj.bullets || []).map(function (b) {
         return "<li>" + escapeHtml(b) + "</li>";
       }).join("");
+      // Same rule as certificates: item.link (external URL) wins, otherwise item.file
+      // (a filename inside assets/projects/). Neither set -> plain, non-interactive card.
+      var rawHref = proj.link ? proj.link : (proj.file ? "assets/projects/" + proj.file : "");
+      var href = isSafeUrl(rawHref) ? rawHref : "";
+      var tag = href ? "a" : "div";
+      var openAttrs = href ? ' href="' + escapeAttr(href) + '" target="_blank" rel="noopener noreferrer"' : "";
+      var openLabel = (content.projects && content.projects.open) || "";
+      var openHint = href
+        ? '<span class="project-open">' + CERT_OPEN_ICON + '<span>' + escapeHtml(openLabel) + '</span></span>'
+        : "";
       return (
-        '<div class="project-card">' +
+        "<" + tag + ' class="project-card"' + openAttrs + ">" +
           '<span class="clause">' + escapeHtml(proj.tagline) + '</span>' +
           '<h3>' + escapeHtml(proj.itemTitle) + '</h3>' +
           '<p>' + escapeHtml(proj.description) + '</p>' +
           '<div class="project-tags">' + tags + '</div>' +
           '<ul>' + bullets + '</ul>' +
-        '</div>'
+          openHint +
+        "</" + tag + ">"
       );
     });
   }

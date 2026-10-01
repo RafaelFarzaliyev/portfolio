@@ -204,6 +204,7 @@ window.SITE_CONTENT = {
     "projects": {
       "eyebrow": "Bölmə 06 — Layihələr",
       "title": "Layihələr",
+      "open": "Layihəyə bax",
       "items": [
         {
           "tagline": "Təsisçi və Kontent Yaradıcısı",
@@ -219,7 +220,9 @@ window.SITE_CONTENT = {
             "Mülki, əmək və ailə hüququna dair mövzuları infoqrafik formatına çevirərək 780-dən çox izləyicidən ibarət orqanik auditoriya formalaşdırmışam.",
             "Araşdırma, məzmunun hazırlanması, dizayn və yayımlanma daxil olmaqla bütün istehsal prosesini müstəqil idarə edərək 40,000-dən çox ümumi baxış əldə etmişəm.",
             "Layihənin təsisçisi olaraq strateji inkişaf, kontent planlaşdırılması və yaradıcı qərarların hamısını müstəqil şəkildə həyata keçirmişəm."
-          ]
+          ],
+          "link": "",
+          "file": ""
         }
       ]
     },
@@ -455,6 +458,7 @@ window.SITE_CONTENT = {
     "projects": {
       "eyebrow": "Section 06 — Projects",
       "title": "Projects",
+      "open": "View project",
       "items": [
         {
           "tagline": "Founder & Content Creator",
@@ -470,7 +474,9 @@ window.SITE_CONTENT = {
             "Converted complex civil, labour and family law topics into infographics, building an organic audience of 780+ followers.",
             "Managed full production — research, design, editing, publishing — achieving 40,000+ total views on content.",
             "Led strategy, content planning and creative direction as the project's founder."
-          ]
+          ],
+          "link": "",
+          "file": ""
         }
       ]
     },

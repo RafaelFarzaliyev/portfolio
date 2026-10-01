@@ -282,13 +282,27 @@
       key: "projects", tab: "Layihələr",
       path: ["projects", "items"],
       itemNoun: { az: "Layihə", en: "Project" },
-      emptyItem: function () { return { tagline: "", itemTitle: "", description: "", tags: [], bullets: [] }; },
+      emptyItem: function () { return { tagline: "", itemTitle: "", description: "", tags: [], bullets: [], link: "", file: "" }; },
       fields: [
         { key: "tagline", type: "text", label: { az: "Qısa rol (məs. Təsisçi)", en: "Tagline (e.g. Founder)" } },
         { key: "itemTitle", type: "text", label: { az: "Layihənin adı", en: "Project name" } },
         { key: "description", type: "textarea", label: { az: "Təsvir", en: "Description" } },
         { key: "tags", type: "lines", label: { az: "Teqlər (hər sətirdə biri)", en: "Tags (one per line)" } },
-        { key: "bullets", type: "lines", label: { az: "Nəticələr (hər sətirdə biri)", en: "Bullet points (one per line)" } }
+        { key: "bullets", type: "lines", label: { az: "Nəticələr (hər sətirdə biri)", en: "Bullet points (one per line)" } },
+        {
+          key: "link", type: "text", shared: true,
+          label: {
+            az: "Layihənin veb linki (varsa) — məs. Instagram, sayt və ya GitHub. Doldurulsa, klikləndikdə bura yönləndirir.",
+            en: "Project web link (if any) — e.g. Instagram, a website or GitHub. If set, clicking the card opens this."
+          }
+        },
+        {
+          key: "file", type: "text", shared: true,
+          label: {
+            az: "Layihə sənədinin fayl adı (assets/projects/ qovluğuna yüklədiyiniz fayl, məs: saniyelik-huquq.pdf). Link boşdursa, klikləndikdə bu fayl yeni tab-da açılır.",
+            en: "Project file name (upload it into assets/projects/, e.g. project-overview.pdf). If Link is empty, clicking opens this file in a new tab."
+          }
+        }
       ]
     },
     {
