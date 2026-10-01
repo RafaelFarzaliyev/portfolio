@@ -221,7 +221,7 @@ window.SITE_CONTENT = {
             "Araşdırma, məzmunun hazırlanması, dizayn və yayımlanma daxil olmaqla bütün istehsal prosesini müstəqil idarə edərək 40,000-dən çox ümumi baxış əldə etmişəm.",
             "Layihənin təsisçisi olaraq strateji inkişaf, kontent planlaşdırılması və yaradıcı qərarların hamısını müstəqil şəkildə həyata keçirmişəm."
           ],
-          "link": "",
+          "link": "https://www.instagram.com/saniyelik.huquq/",
           "file": ""
         }
       ]
@@ -475,7 +475,7 @@ window.SITE_CONTENT = {
             "Managed full production — research, design, editing, publishing — achieving 40,000+ total views on content.",
             "Led strategy, content planning and creative direction as the project's founder."
           ],
-          "link": "",
+          "link": "https://www.instagram.com/saniyelik.huquq/",
           "file": ""
         }
       ]
