@@ -1,0 +1,142 @@
+/* 404 page — extends style.css (same tokens, header, buttons, footer). */
+
+body{ display: flex; flex-direction: column; min-height: 100vh; min-height: 100svh; }
+
+.nf{
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 56px;
+  overflow: hidden;
+}
+/* Same ruled-paper background as the home hero */
+.nf::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(180deg, transparent 0, transparent 47px, color-mix(in srgb, var(--rule) 55%, transparent) 48px);
+  mask-image: linear-gradient(180deg, transparent, black 18%, black 70%, transparent);
+  -webkit-mask-image: linear-gradient(180deg, transparent, black 18%, black 70%, transparent);
+  opacity: 0.5;
+  pointer-events: none;
+}
+.nf-grid{
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 56px;
+  align-items: center;
+}
+@media (min-width: 900px){
+  .nf-grid{ grid-template-columns: 1.3fr 0.9fr; gap: 40px; }
+}
+
+.nf-copy .clause{
+  display: flex;
+  margin-bottom: 18px;
+  opacity: 0;
+  animation: fade-up 700ms ease-out 60ms forwards;
+}
+.nf-copy h1{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  margin: 0 0 20px;
+  opacity: 0;
+  animation: fade-up 800ms ease-out 120ms forwards;
+}
+.nf-copy h1 em{ font-style: italic; color: var(--accent); }
+.nf-copy .lede{
+  max-width: 52ch;
+  color: var(--text-soft);
+  font-size: 1.08rem;
+  margin: 0 0 26px;
+  opacity: 0;
+  animation: fade-up 800ms ease-out 200ms forwards;
+}
+
+/* Requested URL, shown like a docket reference */
+.nf-path{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 34px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  opacity: 0;
+  animation: fade-up 800ms ease-out 250ms forwards;
+}
+.nf-path-label{
+  color: var(--seal);
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+.nf-path code{
+  font-family: inherit;
+  color: var(--text-soft);
+  background: var(--bg-raised);
+  border: 1px solid var(--rule-strong);
+  border-radius: 6px;
+  padding: 5px 10px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.nf .hero-cta{ opacity: 0; animation: fade-up 800ms ease-out 300ms forwards; }
+.nf .btn{ font-family: inherit; }
+
+/* Seal with the big 404 */
+.nf-seal{
+  position: relative;
+  justify-self: center;
+  width: min(300px, 70vw);
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: fade-up 900ms ease-out 200ms forwards;
+}
+.nf-seal::before,
+.nf-seal-ring{
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--seal);
+}
+.nf-seal::before{ inset: 0; opacity: 0.55; }
+.nf-seal-ring{ inset: 14px; opacity: 0.9; border-style: dashed; }
+.nf-seal::after{
+  content: "";
+  position: absolute;
+  inset: 30px;
+  border-radius: 50%;
+  background: var(--bg-raised);
+  border: 1px solid var(--rule-strong);
+  box-shadow: var(--shadow-lg);
+}
+.nf-code{
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(3.6rem, 12vw, 5.6rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+@media (max-width: 480px){
+  .nf{ padding-top: 104px; }
+  .nf-seal{ order: -1; width: min(210px, 60vw); }
+  .nf-grid{ gap: 36px; }
+  .nf-copy h1{ font-size: clamp(2.1rem, 9vw, 3rem); }
+}
